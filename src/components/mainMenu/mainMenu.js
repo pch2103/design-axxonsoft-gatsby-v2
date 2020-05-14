@@ -1,4 +1,4 @@
-import React, {useMemo} from 'react';
+import React, { useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 import {useStaticQuery, graphql} from "gatsby"
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
@@ -8,10 +8,14 @@ import Toolbar from "@material-ui/core/Toolbar";
 import ChangeLanguage from "./changeLanguage";
 import {makeStyles} from "@material-ui/core/styles";
 import Favicon from "./favicon";
-import Link from "../Link";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import ChangeTheme from "./changeTheme";
+import IconButton from "@material-ui/core/IconButton";
+import Hidden from "@material-ui/core/Hidden";
+import GetIcon from "../utils/getIcon";
+import SideDrawer from "./sideDrawer";
+import Link from "../Link";
 
 function HideOnScroll(props) {
 	const {children, window} = props;
@@ -41,6 +45,9 @@ const useStyles = makeStyles((theme) => (
 			},
 			logo: {
 				flexGrow: 1,
+			},
+			menuButton: {
+				marginRight: theme.spacing(0),
 			},
 			tab: {
 				[theme.breakpoints.down('xs')]: {
@@ -79,8 +86,7 @@ const MainMenu = (props) => {
       }
     },
   `)
-
-	// OPTIMIZED! Memorized (cashed) value returned
+	const [drawer, setDrawer] = useState(false);
 
 	const mainMenu = useMemo(
 			() => data.allContentfulMainMenu.edges
@@ -93,41 +99,65 @@ const MainMenu = (props) => {
 					)
 	, [ data, props.langKey])
 
+
+
+	const toggleDrawer = (open) => (event) => {
+		if (event.type === 'keydown' && (
+				event.key === 'Tab' || event.key === 'Shift')) {
+			return;
+		}
+		setDrawer(open);
+	}
+
 	return (
 			<>
+				<SideDrawer
+						drawer={drawer}
+						toggleDrawer={toggleDrawer}
+						mainMenu = {mainMenu}
+				/>
 			<HideOnScroll>
 				<AppBar className={classes.root}>
 					<Toolbar variant="dense">
-					<Link className={classes.logo} to = "/">
+						<Hidden smUp>
+							<IconButton
+									edge="start"
+									onClick={toggleDrawer(true)}
+									className={classes.menuButton}
+									color="inherit"
+									aria-label="menu">
+								<GetIcon icon='Burger'/>
+							</IconButton>
+						</Hidden>
+					<Link className={classes.logo} to = {props.homeLink}>
 						<Favicon />
 					</Link>
 						<Tabs
 								value={props.currentPath}
-								aria-label="simple tabs example"
+								aria-label="main menu"
 								indicatorColor="secondary"
 								variant="scrollable"
 								scrollButtons="auto"
 								className={classes.tabs}
 						>
-							<Tab
-									className={classes.tab}
-									key={mainMenu[0].id}
-									to={mainMenu[0].link}
-									component={Link}
-									label={mainMenu[0].label}
-									value={mainMenu[0].link}
-							/>
-							<Tab
-									className={classes.tab}
-									key={mainMenu[1].id}
-									to={mainMenu[1].link}
-									component={Link}
-									label={mainMenu[1].label}
-									value={mainMenu[1].link}
-							/>
+							{mainMenu &&
+								mainMenu.map(menuItem => (
+										<Tab
+												className={classes.tab}
+												key={menuItem.id}
+												to={menuItem.link}
+												component={Link}
+												label={menuItem.label}
+												value={menuItem.link}
+										/>
+								))
+							}
 						</Tabs>
 						<ChangeTheme setCurrentTheme= {props.setCurrentTheme}/>
-						<ChangeLanguage langs={props.langs} currentLang = {props.langKey}/>
+						<ChangeLanguage
+								langsMenu={props.langsMenu}
+								currentLang = {props.langKey}
+						/>
 					</Toolbar>
 				</AppBar>
 			</HideOnScroll>

@@ -7,16 +7,16 @@ import SEO from "../components/seo";
 import PageBanner from "../components/pageBanner/en";
 import DummyText from "../components/dummyText";
 
-export default function (props) {
+export default function IndexPage(props) {
 
 	return (
 			<Layout location={props.location}>
-				<SEO title={'AxxonSoft Ltd. Products'} lang={props.pageContext.langKey}/>
+				<SEO title={'AxxonSoft Ltd. Materials'} lang={props.pageContext.langKey}/>
 				<PageBanner location={props.location}/>
 				<Container maxWidth="md">
 					<Box my={4}>
 						<Typography variant="h4" component="h1" gutterBottom>
-							Products
+							Materials
 						</Typography>
 						<DummyText/>
 					</Box>

@@ -2,27 +2,25 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import ProTip from '../components/ProTip';
-import Link from '../components/Link';
-import Copyright from '../components/Copyright';
 import Layout from "../layout/layout";
+import DummyText from "../components/dummyText";
+import SEO from "../components/seo";
+import PageBanner from "../components/pageBanner/ru";
 
-export default function IndexPage(props) {
+export default function (props) {
 
-  return (
-    <Layout location={props.location}>
-     <Container maxWidth="sm">
-      <Box my={4}>
-        <Typography variant="h4" component="h1" gutterBottom>
-           Пример страницы v4-beta
-        </Typography>
-        <Link to='/ru/products/' color="secondary">
-          На страницу продуктов компании
-        </Link>
-        <ProTip />
-        <Copyright />
-      </Box>
-    </Container>
-    </Layout>
-  );
+	return (
+			<Layout location={props.location}>
+				<SEO title={'ITV | AxxonSoft. Фирменный стиль'} lang={props.pageContext.langKey}/>
+				<PageBanner location={props.location}/>
+				<Container maxWidth="md">
+					<Box my={4}>
+						<Typography variant="h4" component="h1" gutterBottom>
+							Фирменный стиль
+						</Typography>
+					</Box>
+					<DummyText/>
+				</Container>
+			</Layout>
+	);
 }

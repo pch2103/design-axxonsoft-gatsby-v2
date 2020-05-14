@@ -2,27 +2,25 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import ProTip from '../components/ProTip';
-import Link from '../components/Link';
-import Copyright from '../components/Copyright';
 import Layout from "../layout/layout";
+import SEO from "../components/seo";
+import PageBanner from "../components/pageBanner/en";
+import DummyText from "../components/dummyText";
 
-export default function IndexPage(props) {
+export default function (props) {
 
-  return (
-    <Layout location={props.location}>
-    <Container maxWidth="sm">
-      <Box my={4}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Brand Identity
-        </Typography>
-        <Link to={`/products/`} color="secondary">
-          Go to the products page
-        </Link>
-        <ProTip />
-        <Copyright />
-      </Box>
-    </Container>
-    </Layout>
-  );
+	return (
+			<Layout location={props.location}>
+				<SEO title={'AxxonSoft Ltd. Brand identity'} lang={props.pageContext.langKey}/>
+				<PageBanner location={props.location}/>
+				<Container maxWidth="md">
+					<Box my={4}>
+						<Typography variant="h4" component="h1" gutterBottom>
+							Brand Identity
+						</Typography>
+						<DummyText/>
+					</Box>
+				</Container>
+			</Layout>
+	);
 }

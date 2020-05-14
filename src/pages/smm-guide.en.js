@@ -11,12 +11,12 @@ export default function (props) {
 
 	return (
 			<Layout location={props.location}>
-				<SEO title={'AxxonSoft Ltd. Products'} lang={props.pageContext.langKey}/>
+				<SEO title={'AxxonSoft Ltd. SMM-guide.'} lang={props.pageContext.langKey}/>
 				<PageBanner location={props.location}/>
 				<Container maxWidth="md">
 					<Box my={4}>
 						<Typography variant="h4" component="h1" gutterBottom>
-							Products
+							SMM-guide.
 						</Typography>
 						<DummyText/>
 					</Box>

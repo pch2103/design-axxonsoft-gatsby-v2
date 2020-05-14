@@ -1,14 +1,20 @@
-// if (process.env.NODE_ENV === "development") {
+if (process.env.NODE_ENV === "development") {
   require("dotenv").config();
-// }
+}
+
 const languages = require('./src/data/languages');
 
 module.exports = {
+  siteMetadata: {
+    title: 'Axxonsoft Design',
+    description: `Axxonsoft Design materials`,
+    author: [`@AxxonSoft`, '@Design_Dep'],
+    languages
+  },
   plugins: [
     'gatsby-plugin-top-layout',
     {
       resolve: 'gatsby-plugin-material-ui',
-      // If you want to use styled components you should change the injection order.
       options: {
         // stylesProvider: {
         //   injectFirst: true,
@@ -56,8 +62,4 @@ module.exports = {
       },
     },
   ],
-  siteMetadata: {
-    title: 'My page',
-    languages
-  },
 };
