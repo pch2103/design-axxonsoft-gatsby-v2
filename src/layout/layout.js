@@ -7,6 +7,16 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import getTheme from "../theme";
 import Footer from "../components/footer/footer";
 
+import {IntlProvider} from "react-intl"
+import messages_en from '../data/messages/en';
+import messages_ru from '../data/messages/ru';
+
+const messages = {
+	'en': messages_en,
+	'ru': messages_ru
+}
+
+
 const Layout = ( props ) => {
 	const data = useStaticQuery(graphql`
   query {
@@ -32,16 +42,18 @@ const Layout = ( props ) => {
 
 	return (
 				<ThemeProvider theme={getTheme(currentTheme)}>
+					<IntlProvider locale={langKey} messages={messages[langKey]}>
 					<CssBaseline />
 					<MainMenu
 							setCurrentTheme = {setCurrentTheme}
 							langsMenu = {langsMenu}
-							langKey = {langKey}
+							locale = {langKey}
 							currentPath = {url}
 							homeLink = {homeLink}
 					/>
 					{children}
 					<Footer langKey = {langKey}/>
+					</IntlProvider>
 				</ThemeProvider>
 	)
 }

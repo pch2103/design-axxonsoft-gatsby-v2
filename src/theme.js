@@ -7,7 +7,7 @@ const theme = createMuiTheme({
   overrides: {
     MuiLink: {
       root: {
-        color: '#c56200',
+        color: '#ff9100',
       },
     },
   },

@@ -3,8 +3,8 @@ import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import {label} from "../../data/translate"
 import Link from "../Link";
+import { FormattedMessage } from 'react-intl';
 
 const useStyles = makeStyles((theme) => (
 		{
@@ -28,12 +28,8 @@ export default function ChangeLanguage(props) {
 		setAnchorEl(event.currentTarget);
 	};
 
-	const handleClose = (event) => {
+	const handleClose = () => {
 		setAnchorEl(null);
-		const { setLanguage } = event.currentTarget.dataset
-			props.langsMenu.forEach(lang => {
-			lang.selected = (setLanguage === lang.langKey)
-		})
 	};
 
 	return (
@@ -44,7 +40,7 @@ export default function ChangeLanguage(props) {
 						aria-haspopup="true"
 						onClick={handleClick}
 				>
-						{props.currentLang}
+						<FormattedMessage id="language"/>
 				</Button>
 				<Menu
 						id="simple-menu"
@@ -57,13 +53,12 @@ export default function ChangeLanguage(props) {
 						props.langsMenu.map(lang => (
 							<MenuItem
 									className={classes.menuItem}
-									data-set-language={lang.langKey}
 									key={lang.langKey}
 									onClick={handleClose}
 									to = {lang.link}
 									component={Link}
 									>
-								{label[lang.langKey]}
+								<FormattedMessage id={lang.langKey}/>
 							</MenuItem>
 						))
 					}

@@ -7,8 +7,7 @@ import SEO from "../components/seo";
 import PageBanner from "../components/pageBanner/ru";
 import DummyText from "../components/dummyText";
 
-export default function IndexPage(props) {
-
+export default function (props) {
 	return (
 			<Layout location={props.location}>
 				<SEO title={'ITV | AxxonSoft. Выставочные стенды.'} lang={props.pageContext.langKey}/>

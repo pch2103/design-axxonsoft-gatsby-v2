@@ -1,29 +1,13 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import MuiLink from '@material-ui/core/Link';
+import { FormattedMessage } from 'react-intl';
 
-export function CopyrightEN() {
+export default function () {
   return (
-      <Typography variant="body2" color="textSecondary" align="center">
+      <Typography variant="body2" align="center">
         {'Copyright © '}
-        {new Date().getFullYear()}
-        {' '}
-        <MuiLink color="inherit" href="https://www.axxonsoft.com/">
-          AxxonSoft.
-        </MuiLink>{' All rights reserved.'}
-      </Typography>
-  );
-}
-
-export function CopyrightRU() {
-  return (
-      <Typography variant="body2" color="textSecondary" align="center">
-        {'Copyright © '}
-        {new Date().getFullYear()}
-        {' '}
-        <MuiLink color="inherit" href="https://www.itv.ru/">
-          ITV | AxxonSoft.
-        </MuiLink>{' Дизайн-группа.'}
+        {new Date().getFullYear()}{' '}
+          <FormattedMessage id='company'/>{' '}<FormattedMessage id='copyright'/>
       </Typography>
   );
 }

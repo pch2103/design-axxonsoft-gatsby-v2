@@ -11,6 +11,7 @@
     "gatsby-plugin-manifest": "^2.4.2",
     "gatsby-plugin-material-ui": "latest",
     "gatsby-plugin-react-helmet": "latest",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sharp": "^2.6.3",
     "gatsby-source-contentful": "^2.3.3",
     "gatsby-source-filesystem": "^2.3.3",
@@ -19,7 +20,8 @@
     "ptz-i18n": "^1.0.0",
     "react": "latest",
     "react-dom": "latest",
-    "react-helmet": "latest"
+    "react-helmet": "latest",
+    "react-intl": "^4.5.3"
   },
   "scripts": {
     "develop": "gatsby develop",

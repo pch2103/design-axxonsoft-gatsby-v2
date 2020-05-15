@@ -91,13 +91,13 @@ const MainMenu = (props) => {
 	const mainMenu = useMemo(
 			() => data.allContentfulMainMenu.edges
 					.map(edge => ({
-								label: props.langKey === 'en' ? edge.node.label : edge.node.labelRu,
-								link: `/${props.langKey}${edge.node.link}`.replace('/en/', '/'),
+								label: props.locale === 'en' ? edge.node.label : edge.node.labelRu,
+								link: `/${props.locale}${edge.node.link}`.replace('/en/', '/'),
 								icon: edge.node.icon,
 								id: edge.node.id
 							})
 					)
-	, [ data, props.langKey])
+	, [ data, props.locale])
 
 
 
@@ -143,8 +143,8 @@ const MainMenu = (props) => {
 							{mainMenu &&
 								mainMenu.map(menuItem => (
 										<Tab
-												className={classes.tab}
 												key={menuItem.id}
+												className={classes.tab}
 												to={menuItem.link}
 												component={Link}
 												label={menuItem.label}
@@ -156,7 +156,7 @@ const MainMenu = (props) => {
 						<ChangeTheme setCurrentTheme= {props.setCurrentTheme}/>
 						<ChangeLanguage
 								langsMenu={props.langsMenu}
-								currentLang = {props.langKey}
+								locale = {props.locale}
 						/>
 					</Toolbar>
 				</AppBar>
