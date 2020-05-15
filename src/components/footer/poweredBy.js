@@ -7,9 +7,9 @@ import MuiLink from '@material-ui/core/Link';
 
 export default () => (
 		<>
-			<Box mt={2} >
+			<Box mt={2}>
 				<Typography variant="caption" display="block" gutterBottom>
-				<FormattedMessage id='powered'/>{': '}
+					<FormattedMessage id='powered'/>{': '}
 					<MuiLink color="inherit" target="_blank" href="https://reactjs.org/">
 						React
 					</MuiLink>{', '}
@@ -23,7 +23,7 @@ export default () => (
 
 			</Box>
 			<Box mt={1}>
-				<PoweredLogo/>
+				<PoweredLogo />
 			</Box>
 		</>
 
