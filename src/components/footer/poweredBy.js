@@ -1,11 +1,24 @@
 import React from 'react';
 import {FormattedMessage} from 'react-intl';
-import PoweredLogo from '../../images/powered_with.svg';
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import MuiLink from '@material-ui/core/Link';
+import {graphql, useStaticQuery} from "gatsby";
+import Img from "gatsby-image";
 
-export default () => (
+export default () => {
+	const data = useStaticQuery(graphql`
+  query {
+	file(relativePath: { eq: "powered.png" }) {
+		childImageSharp {
+			fixed(width: 96, height: 31) {
+			...GatsbyImageSharpFixed
+			}
+		}
+	}
+}
+`)
+	return (
 		<>
 			<Box mt={2}>
 				<Typography variant="caption" display="block" gutterBottom>
@@ -23,8 +36,8 @@ export default () => (
 
 			</Box>
 			<Box mt={1}>
-				<PoweredLogo />
+				<Img fixed = {data.file.childImageSharp.fixed} alt = 'Powered logo'	/>
 			</Box>
 		</>
-
-);
+	)
+};
