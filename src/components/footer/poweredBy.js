@@ -3,21 +3,9 @@ import {FormattedMessage} from 'react-intl';
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import MuiLink from '@material-ui/core/Link';
-import {graphql, useStaticQuery} from "gatsby";
-import Img from "gatsby-image";
+import PoweredSvg from "./poweredSvg";
 
 export default () => {
-	const data = useStaticQuery(graphql`
-  query {
-	file(relativePath: { eq: "powered.png" }) {
-		childImageSharp {
-			fixed(width: 96, height: 31) {
-			...GatsbyImageSharpFixed
-			}
-		}
-	}
-}
-`)
 
 	return (
 		<>
@@ -34,10 +22,9 @@ export default () => {
 						Gatsby
 					</MuiLink>{', '}
 				</Typography>
-
 			</Box>
 			<Box mt={1}>
-				<Img fixed = {data.file.childImageSharp.fixed} alt = 'Powered logo'	/>
+				<PoweredSvg />
 			</Box>
 		</>
 	)
