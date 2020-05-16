@@ -25,7 +25,7 @@ const ContentHeader = ({title}) => {
 
 	return (
 			<Box className={classes.root}>
-				<Typography variant="h5" className={classes.header}>
+				<Typography variant="h4" component="h2" className={classes.header}>
 					<FormattedMessage id={title}/>
 				</Typography>
 			</Box>

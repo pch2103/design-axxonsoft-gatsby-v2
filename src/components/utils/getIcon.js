@@ -8,6 +8,7 @@ import ImportantDevices from "@material-ui/icons/ImportantDevices";
 import Day from '@material-ui/icons/WbSunny';
 import Night from "@material-ui/icons/Brightness4";
 import Burger from "@material-ui/icons/Menu";
+import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 
 const GetIcon = ({icon}) => {
 	switch (icon) {
@@ -19,6 +20,7 @@ const GetIcon = ({icon}) => {
 		case 'Day': return <Day />
 		case 'Night': return <Night />
 		case 'Burger': return <Burger />
+		case 'Download': return <CloudDownloadIcon />
 		default: return <Done />
 	}
 }
