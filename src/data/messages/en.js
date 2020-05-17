@@ -7,4 +7,6 @@ module.exports = {
   'copyright': 'All rights reserved.',
   'Logotype': 'Logotype',
   'powered': 'Powered by',
+  'UsageGuidelines': 'Usage guidelines',
+  'Colors': 'Color palette',
 };

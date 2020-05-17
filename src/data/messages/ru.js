@@ -7,4 +7,6 @@ module.exports = {
   'copyright': 'Дизайн-группа компании.',
   'Logotype': 'Логотипы',
   'powered': 'Разработано с помощью',
+  'UsageGuidelines': 'Правила размещения',
+  'Colors': 'Цветовая палитра',
 };

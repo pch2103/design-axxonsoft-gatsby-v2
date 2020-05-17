@@ -2,8 +2,7 @@ import React from 'react';
 import {useStaticQuery, graphql} from "gatsby";
 import PageCard from "./pageCard";
 
-export default ({cardName}) => {
-
+export default ({cardName, ...props}) => {
 	const data = useStaticQuery(graphql` 
 	query{
     allContentfulContentCard {
@@ -35,13 +34,13 @@ export default ({cardName}) => {
 
 	if(cardDraft){
 		cardContent = {
-			id: cardDraft.node.id,
-			title: cardDraft.node.titleEN,
-			text: cardDraft.node.textEN.textEN,
-			image: cardDraft.node.imageEN,
-			downloadUrl: cardDraft.node.downloadUrlEN
+			id: cardDraft.node.id || '',
+			title: cardDraft.node.titleEN || '',
+			text: cardDraft.node.textEN.textEN || '',
+			image: cardDraft.node.imageEN || '',
+			downloadUrl: cardDraft.node.downloadUrlEN || ''
 		}
 	}
 
-	return <PageCard cardContent = {cardContent}/>
+	return <PageCard cardContent = {cardContent} {...props}/>
 }
