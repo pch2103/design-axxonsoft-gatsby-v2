@@ -9,4 +9,7 @@ module.exports = {
   'powered': 'Разработано с помощью',
   'UsageGuidelines': 'Правила размещения',
   'Colors': 'Цветовая палитра',
+  'Usage restrictions': 'Примеры неправильного использования',
+  'Fonts': 'Шрифты',
+  'Download': 'Скачать',
 };

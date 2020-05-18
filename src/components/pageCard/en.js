@@ -36,7 +36,8 @@ export default ({cardName, ...props}) => {
 		cardContent = {
 			id: cardDraft.node.id || '',
 			title: cardDraft.node.titleEN || '',
-			text: cardDraft.node.textEN.textEN || '',
+			text: cardDraft.node.textEN
+					? cardDraft.node.textEN.textEN || '' : '',
 			image: cardDraft.node.imageEN || '',
 			downloadUrl: cardDraft.node.downloadUrlEN || ''
 		}

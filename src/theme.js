@@ -23,7 +23,7 @@ const theme = createMuiTheme(Object.assign(generalTheme, {
 	overrides: {
 		MuiLink: {
 			root: {
-				color: '#4E6AFF',
+				color: '#273DE8',
 			},
 		},
 	},
@@ -47,7 +47,11 @@ const theme = createMuiTheme(Object.assign(generalTheme, {
 			main: '#283593',
 			dark: '#404040',
 			contrastText: '#fff',
-		}
+		},
+		page: {
+			main: '#E2E2E2',
+			contrastText: '#000',
+		},
 	},
 }));
 
@@ -80,7 +84,11 @@ const dark_theme = createMuiTheme(Object.assign(generalTheme,{
 			main: '#505050',
 			dark: '#404040',
 			contrastText: '#fff',
-		}
+		},
+		page: {
+			main: '#404040',
+			contrastText: '#fff',
+		},
 	},
 }));
 

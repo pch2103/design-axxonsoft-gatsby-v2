@@ -10,6 +10,7 @@ import {Link} from "@material-ui/core";
 import ReactMarkdown from "react-markdown"
 import GetIcon from "../utils/getIcon";
 import clsx from 'clsx';
+import {FormattedMessage} from "react-intl";
 
 const useStyles = makeStyles((theme) => (
 		{
@@ -32,7 +33,15 @@ const useStyles = makeStyles((theme) => (
 			},
 			media: {
 				height: 0,
-				paddingTop: '52%',
+			},
+			mediaH50: {
+				paddingTop: '50%',
+			},
+			mediaH100: {
+				paddingTop: '100%',
+			},
+			mediaH150: {
+				paddingTop: '150%',
 			},
 			outline: {
 				border: `${theme.palette.divider} 1px solid`,
@@ -57,7 +66,8 @@ const useStyles = makeStyles((theme) => (
 const PageCard = ({cardContent, ...props}) => {
 	const classes = useStyles();
 
-	const mediaStyle = clsx(classes.media, !props.centered && classes.outline)
+	const mediaHeight = classes[`mediaH${props.mediaHeigt}`] || classes.mediaH50
+	const mediaStyle = clsx(classes.media, !props.centered && classes.outline, mediaHeight)
 	const contentStyle = clsx(classes.content, props.centered && classes.contentCentered)
 	const dividerStyle = clsx(classes.shortDivider, props.centered && classes.contentCentered)
 
@@ -73,10 +83,12 @@ const PageCard = ({cardContent, ...props}) => {
 					/>
 					}
 					<CardContent className={contentStyle}>
-						<Typography className={classes.title} variant="h6" component="h3">
-							{cardContent.title}
-						</Typography>
-						<Typography variant="body2" component={'span'} color="textSecondary">
+						{cardContent.title &&
+							<Typography className={classes.title} variant="h6" component="h3">
+								{cardContent.title}
+							</Typography>
+						}
+							<Typography variant="body2" component={'span'} color="textSecondary">
 							<ReactMarkdown
 									source={cardContent.text}
 							/>
@@ -94,7 +106,7 @@ const PageCard = ({cardContent, ...props}) => {
 									color="primary"
 									startIcon={<GetIcon icon="Download"/>}
 							>
-								Download
+								<FormattedMessage id='Download'/>
 							</Button>
 						</CardActions>
 						}

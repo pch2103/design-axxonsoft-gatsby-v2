@@ -37,7 +37,8 @@ export default ({cardName, ...props}) => {
 		cardContent = {
 			id: cardDraft.node.id || '',
 			title: cardDraft.node.titleRU || '',
-			text: cardDraft.node.textRU.textRU || '',
+			text: cardDraft.node.textRU
+					? cardDraft.node.textRU.textRU || '' : '',
 			image: cardDraft.node.imageRU || '',
 			downloadUrl: cardDraft.node.downloadUrlRU || '',
 		}

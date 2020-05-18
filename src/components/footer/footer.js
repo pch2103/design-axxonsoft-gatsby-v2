@@ -4,27 +4,27 @@ import makeStyles from "@material-ui/core/styles/makeStyles";
 import PoweredBy from "./poweredBy";
 import Container from "@material-ui/core/Container";
 
-
 const useStyles = makeStyles((theme) => {
 	return (
 			{
 				root: {
 					width: '100%',
+					marginTop: theme.spacing(14),
 					paddingTop: theme.spacing(2),
-					paddingBottom: theme.spacing(4),
-					background: theme.palette.menu.dark,
-					color: theme.palette.primary.contrastText,
+					paddingBottom: theme.spacing(2),
+					background: theme.palette.page.main,
+					color: theme.palette.page.contrastText,
 					textAlign: "center"
 				},
 			})
 });
 
-const Footer = () => {
+const Footer = ({langKey}) => {
 	const classes = useStyles();
 	return (
 			<footer className={classes.root}>
-				<Container spacing={3} maxWidth="xs">
-					<Copyright/>
+				<Container spacing={2} maxWidth="xs">
+					<Copyright langKey={langKey}/>
 					<PoweredBy/>
 				</Container>
 			</footer>

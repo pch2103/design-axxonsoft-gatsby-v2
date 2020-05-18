@@ -1,13 +1,18 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import { FormattedMessage } from 'react-intl';
+import MuiLink from '@material-ui/core/Link';
+import {FormattedMessage} from 'react-intl';
 
-export default function () {
-  return (
-      <Typography variant="body2" align="center">
-        {'Copyright © '}
-        {new Date().getFullYear()}{' '}
-          <FormattedMessage id='company'/>{' '}<FormattedMessage id='copyright'/>
-      </Typography>
-  );
+export default function ({langKey}) {
+	const companySiteUrl = langKey === 'ru' ? 'https://www.itv.ru/' : 'https://www.axxonsoft.com/'
+	return (
+			<Typography variant="body2" align="center">
+				{'Copyright © '}
+				{new Date().getFullYear()}{' '}
+				<MuiLink target="_blank" href={companySiteUrl}>
+					<FormattedMessage id='company'/>
+				</MuiLink>
+				{' '}<FormattedMessage id='copyright'/>
+			</Typography>
+	);
 }
