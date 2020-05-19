@@ -19,6 +19,15 @@ export default ({cardName, ...props}) => {
             file {
               url
             }
+          	fluid(maxWidth: 600, maxHeight: 340) {
+            	aspectRatio
+            	base64
+            	sizes
+            	src
+            	srcSet
+            	srcSetWebp
+            	srcWebp
+          	}
         	}
         	downloadUrlEN
       	}

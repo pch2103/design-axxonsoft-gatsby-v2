@@ -10,6 +10,7 @@ import {Link} from "@material-ui/core";
 import ReactMarkdown from "react-markdown"
 import GetIcon from "../utils/getIcon";
 import clsx from 'clsx';
+import Img from "gatsby-image";
 import {FormattedMessage} from "react-intl";
 
 const useStyles = makeStyles((theme) => (
@@ -71,24 +72,31 @@ const PageCard = ({cardContent, ...props}) => {
 	const contentStyle = clsx(classes.content, props.centered && classes.contentCentered)
 	const dividerStyle = clsx(classes.shortDivider, props.centered && classes.contentCentered)
 
-
 	return (
 			<div className={classes.root}>
 				<div className={classes.card}>
-					{cardContent.image &&
+					{cardContent.image && cardContent.image.fluid === null &&
 					<CardMedia
 							className={mediaStyle}
 							image={cardContent.image.file.url}
 							title={cardContent.image.title}
 					/>
 					}
+					{cardContent.image && cardContent.image.fluid !== null &&
+					<CardMedia
+							className={mediaStyle}
+							fluid={cardContent.image.fluid}
+							component={Img}
+							title={cardContent.image.title}
+					/>
+					}
 					<CardContent className={contentStyle}>
 						{cardContent.title &&
-							<Typography className={classes.title} variant="h6" component="h3">
-								{cardContent.title}
-							</Typography>
+						<Typography className={classes.title} variant="h6" component="h3">
+							{cardContent.title}
+						</Typography>
 						}
-							<Typography variant="body2" component={'span'} color="textSecondary">
+						<Typography variant="body2" component={'span'} color="textSecondary">
 							<ReactMarkdown
 									source={cardContent.text}
 							/>
@@ -111,7 +119,7 @@ const PageCard = ({cardContent, ...props}) => {
 						</CardActions>
 						}
 					</div>
-					 <Divider className={dividerStyle}/>
+					<Divider className={dividerStyle}/>
 				</div>
 			</div>
 	)
