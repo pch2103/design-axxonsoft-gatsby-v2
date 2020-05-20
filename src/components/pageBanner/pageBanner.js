@@ -36,7 +36,7 @@ const PageBanner = ({banner}) => {
 
 	if (!banner) return null
 	return (
-			<Box className={classes.root}>
+			<Box id="pageBanner" className={classes.root}>
 				<Container maxWidth="sm">
 					<img className={classes.logo} src={banner.icon.file.url} alt={'page icon'}/>
 					<Typography variant="h4" component="h2" className={classes.header}>

@@ -12,4 +12,6 @@ module.exports = {
   'Usage restrictions': 'Примеры неправильного использования',
   'Fonts': 'Шрифты',
   'Download': 'Скачать',
+  'Contents': 'Содержание:',
+  'AxxonNext': 'Логотипы Axxon Next ',
 };

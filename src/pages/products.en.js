@@ -1,26 +1,49 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
 import Layout from "../layout/layout";
 import SEO from "../components/seo";
 import PageBanner from "../components/pageBanner/en";
 import DummyText from "../components/dummyText";
+import Grid from "@material-ui/core/Grid";
+import ContentHeader from "../components/contntItems/contentHeader";
+import Hidden from "@material-ui/core/Hidden";
+import ContentMenu from "../components/contentMenu/contentMenu";
 
 export default function (props) {
-
+	const pageSection = [
+			{label: 'Chapter1'},
+			{label: 'Chapter2'},
+			{label: 'Chapter3'}
+	];
 	return (
 			<Layout location={props.location}>
 				<SEO title={'AxxonSoft Ltd. Products'} lang={props.pageContext.langKey}/>
 				<PageBanner location={props.location}/>
+				<section style={{display: "flex"}}>
 				<Container maxWidth="md">
-					<Box my={4}>
-						<Typography variant="h4" component="h1" gutterBottom>
-							Products
-						</Typography>
-						<DummyText/>
-					</Box>
+						<Grid container item xs={12} >
+							<Grid id={pageSection[0].label} item xs={12}>
+								<ContentHeader title={'AxxonNext'}/>
+								<DummyText/>
+							</Grid>
+							<Grid id={pageSection[1].label} item xs={12}>
+								<ContentHeader title={'AxxonNext'}/>
+								<DummyText/>
+							</Grid>
+
+							<Grid id={pageSection[2].label} item xs={12}>
+								<ContentHeader title={'AxxonNext'}/>
+								<DummyText/>
+								<DummyText/>
+							</Grid>
+						</Grid>
 				</Container>
+					<article>
+						<Hidden xsDown>
+							<ContentMenu pageSection={pageSection} />
+						</Hidden>
+					</article>
+				</section>
 			</Layout>
 	);
 }

@@ -12,4 +12,6 @@ module.exports = {
   'Usage restrictions': 'Usage restrictions',
   'Fonts': 'Fonts',
   'Download': 'Download',
+  'Contents': 'Table of contents:',
+  'AxxonNext': 'Axxon Next Logos'
 };
