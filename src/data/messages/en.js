@@ -9,7 +9,7 @@ module.exports = {
   'powered': 'Powered by',
   'UsageGuidelines': 'Usage guidelines',
   'Colors': 'Color palette',
-  'Usage restrictions': 'Usage restrictions',
+  'UsageRestrictions': 'Usage restrictions',
   'Fonts': 'Fonts',
   'Download': 'Download',
   'Contents': 'Table of contents:',

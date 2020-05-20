@@ -6,8 +6,6 @@ import PageBanner from "../components/pageBanner/en";
 import DummyText from "../components/dummyText";
 import Grid from "@material-ui/core/Grid";
 import ContentHeader from "../components/contntItems/contentHeader";
-import Hidden from "@material-ui/core/Hidden";
-import ContentMenu from "../components/contentMenu/contentMenu";
 
 export default function (props) {
 	const pageSection = [
@@ -19,8 +17,10 @@ export default function (props) {
 			<Layout location={props.location}>
 				<SEO title={'AxxonSoft Ltd. Products'} lang={props.pageContext.langKey}/>
 				<PageBanner location={props.location}/>
+
 				<section style={{display: "flex"}}>
-				<Container maxWidth="md">
+
+					<Container maxWidth="md">
 						<Grid container item xs={12} >
 							<Grid id={pageSection[0].label} item xs={12}>
 								<ContentHeader title={'AxxonNext'}/>
@@ -38,12 +38,9 @@ export default function (props) {
 							</Grid>
 						</Grid>
 				</Container>
-					<article>
-						<Hidden xsDown>
-							<ContentMenu pageSection={pageSection} />
-						</Hidden>
-					</article>
+
 				</section>
+
 			</Layout>
 	);
 }

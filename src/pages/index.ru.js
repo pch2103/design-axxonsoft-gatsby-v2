@@ -6,16 +6,27 @@ import PageBanner from "../components/pageBanner/ru";
 import PageCard from "../components/pageCard/ru"
 import Grid from "@material-ui/core/Grid";
 import ContentHeader from "../components/contntItems/contentHeader";
+import EndOfSection from "../components/contntItems/endOfSection";
+import Hidden from "@material-ui/core/Hidden";
+import ContentMenu from "../components/contentMenu/contentMenu";
 
 export default function (props) {
+	const pageSection = [
+		{label: 'Logotype'},
+		{label: 'UsageGuidelines'},
+		{label: 'Colors'},
+		{label: 'UsageRestrictions'},
+		{label: 'Fonts'},
+	];
 
 	return (
 			<Layout location={props.location}>
 				<SEO title={'ITV | AxxonSoft. Фирменный стиль'} lang={props.pageContext.langKey}/>
 				<PageBanner location={props.location}/>
+				<section style={{display: "flex"}}>
 				<Container maxWidth="md">
 
-					<Grid container spacing={2}>
+					<Grid name={pageSection[0].label} container spacing={2}>
 						<Grid item xs={12}>
 							<ContentHeader title={'Logotype'}/>
 						</Grid>
@@ -33,7 +44,9 @@ export default function (props) {
 						</Grid>
 					</Grid>
 
-					<Grid container spacing={2}>
+					<EndOfSection/>
+
+					<Grid name={pageSection[1].label} container spacing={2}>
 						<Grid item xs={12}>
 							<ContentHeader title={'UsageGuidelines'}/>
 						</Grid>
@@ -48,7 +61,9 @@ export default function (props) {
 						</Grid>
 					</Grid>
 
-					<Grid container spacing={2}>
+					<EndOfSection/>
+
+					<Grid container name={pageSection[2].label}  spacing={2}>
 						<Grid item xs={12}>
 							<ContentHeader title={'Colors'}/>
 						</Grid>
@@ -78,9 +93,11 @@ export default function (props) {
 						</Grid>
 					</Grid>
 
-					<Grid container spacing={2}>
+					<EndOfSection/>
+
+					<Grid  name={pageSection[3].label} container spacing={2}>
 						<Grid item xs={12}>
-							<ContentHeader title={'Usage restrictions'}/>
+							<ContentHeader title={'UsageRestrictions'}/>
 						</Grid>
 						<Grid item xs={12} sm={4}>
 							<PageCard cardName="DoNotRotate" />
@@ -102,7 +119,9 @@ export default function (props) {
 						</Grid>
 					</Grid>
 
-					<Grid container spacing={2}>
+					<EndOfSection/>
+
+					<Grid name={pageSection[4].label} container spacing={2}>
 						<Grid item xs={12}>
 							<ContentHeader title={'Fonts'}/>
 						</Grid>
@@ -130,6 +149,8 @@ export default function (props) {
 							</Grid>
 						</Grid>
 
+						<EndOfSection/>
+
 						<Grid item xs={12} sm={3}>
 							<PageCard cardName="SecondaryTypeface" />
 						</Grid>
@@ -148,7 +169,17 @@ export default function (props) {
 						</Grid>
 					</Grid>
 
+					<EndOfSection/>
+
 				</Container>
+
+					<article>
+						<Hidden xsDown>
+							<ContentMenu pageSection={pageSection}/>
+						</Hidden>
+					</article>
+
+				</section>
 			</Layout>
 	);
 }
