@@ -16,7 +16,7 @@ import {FormattedMessage} from "react-intl";
 const useStyles = makeStyles((theme) => (
 		{
 			root: {
-				maxWidth: 600,
+				// maxWidth: 600,
 				height: '100%',
 				margin: 'auto',
 			},
@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => (
 				border: `${theme.palette.divider} 1px solid`,
 			},
 			title: {
-				marginTop: theme.spacing(2)
+				paddingTop: theme.spacing(2),
 			},
 			cardAction: {
 				height: '100%',
@@ -75,6 +75,7 @@ const PageCard = ({cardContent, ...props}) => {
 	return (
 			<div className={classes.root}>
 				<div className={classes.card}>
+					<section >
 					{cardContent.image && cardContent.image.fluid === null &&
 					<CardMedia
 							className={mediaStyle}
@@ -92,16 +93,17 @@ const PageCard = ({cardContent, ...props}) => {
 					}
 					<CardContent className={contentStyle}>
 						{cardContent.title &&
-						<Typography className={classes.title} variant="h6" component="h3">
+						<Typography className={classes.title} variant="h6">
 							{cardContent.title}
 						</Typography>
 						}
-						<Typography variant="body2" component={'span'} color="textSecondary">
+						<Typography variant="body2" component={'span'} >
 							<ReactMarkdown
 									source={cardContent.text}
 							/>
 						</Typography>
 					</CardContent>
+					</section>
 					<div className={classes.cardAction}>
 						{cardContent.downloadUrl &&
 						<CardActions>

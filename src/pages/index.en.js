@@ -24,7 +24,8 @@ export default function (props) {
 				<SEO title={'AxxonSoft Ltd. Brand identity'} lang={props.pageContext.langKey}/>
 				<PageBanner location={props.location}/>
 				<section style={{display: "flex"}}>
-					<Container maxWidth="md">
+
+					<Container maxWidth="lg">
 
 						<Grid name={pageSection[0].label} container spacing={2}>
 							<Grid item xs={12}>
@@ -167,7 +168,7 @@ export default function (props) {
 					</Container>
 
 					<article>
-						<Hidden xsDown>
+						<Hidden smDown>
 							<ContentMenu pageSection={pageSection}/>
 						</Hidden>
 					</article>

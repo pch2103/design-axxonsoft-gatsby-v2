@@ -1,6 +1,7 @@
 import React from 'react';
 import {useStaticQuery, graphql} from "gatsby";
 import PageCard from "./pageCard";
+import PageCardLandscape from "./pageCardLandscape";
 
 export default ({cardName, ...props}) => {
 	const data = useStaticQuery(graphql` 
@@ -41,6 +42,7 @@ export default ({cardName, ...props}) => {
 					.find(({node}) => cardName === node.cardName)
 	), [data, cardName])
 
+
 	if(cardDraft){
 		cardContent = {
 			id: cardDraft.node.id || '',
@@ -52,5 +54,8 @@ export default ({cardName, ...props}) => {
 		}
 	}
 
-	return <PageCard cardContent = {cardContent} {...props}/>
+
+	return props.landscape
+			? <PageCardLandscape cardContent = {cardContent}  {...props}/>
+			: <PageCard cardContent = {cardContent} {...props}/>
 }

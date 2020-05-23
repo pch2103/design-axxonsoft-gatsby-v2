@@ -17,6 +17,7 @@ export default function (props) {
 		{label: 'Colors'},
 		{label: 'UsageRestrictions'},
 		{label: 'Fonts'},
+		{label: 'LogoGroup'},
 	];
 
 	return (
@@ -24,7 +25,7 @@ export default function (props) {
 				<SEO title={'ITV | AxxonSoft. Фирменный стиль'} lang={props.pageContext.langKey}/>
 				<PageBanner location={props.location}/>
 				<section style={{display: "flex"}}>
-				<Container maxWidth="md">
+				<Container maxWidth="lg">
 
 					<Grid name={pageSection[0].label} container spacing={2}>
 						<Grid item xs={12}>
@@ -171,10 +172,47 @@ export default function (props) {
 
 					<EndOfSection/>
 
+					<Grid name={pageSection[5].label} container spacing={2}>
+						<Grid item xs={12}>
+							<ContentHeader title={'LogoGroup'}/>
+						</Grid>
+
+						<Grid item xs={12} sm={4}>
+							<PageCard cardName="ipdromLogo" />
+						</Grid>
+						<Grid item xs={12} sm={4}>
+							<PageCard cardName="noderLogo" />
+						</Grid>
+						<Grid item xs={12} sm={4}>
+							<PageCard cardName="rubiconLogo" />
+						</Grid>
+
+						<EndOfSection height = {2}/>
+
+						<Grid item xs={12} sm={12}>
+							<PageCard cardName="logosExbSample" landscape={true} />
+						</Grid>
+
+						<EndOfSection height = {2}/>
+
+						<Grid item xs={12} sm={12}>
+							<PageCard cardName="LogoInGroup" landscape={true} />
+						</Grid>
+
+						<EndOfSection height = {2}/>
+
+						<Grid item xs={12} sm={12}>
+							<PageCard cardName="LogoSk" landscape={true} />
+						</Grid>
+
+					</Grid>
+
+					<EndOfSection/>
+
 				</Container>
 
 					<article>
-						<Hidden xsDown>
+						<Hidden smDown>
 							<ContentMenu pageSection={pageSection}/>
 						</Hidden>
 					</article>

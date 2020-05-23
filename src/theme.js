@@ -11,12 +11,20 @@ const generalTheme = {
 			'Arial',
 			'sans-serif',
 		].join(','),
-		h5: {
+		h4: {
 			fontWeight: 600,
 		},
+		h5: {
+			fontWeight: 700,
+		},
 		h6: {
-			fontWeight: 600,
-		}
+			fontWeight: 700,
+		},
+		subtitle2: {
+			'@media (max-width:960px)': {
+				fontSize: '0.9em',
+			},
+		},
 	},
 }
 const theme = createMuiTheme(Object.assign(generalTheme, {

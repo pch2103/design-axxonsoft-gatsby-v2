@@ -9,8 +9,8 @@ const useStyles = makeStyles((theme) => {
 			{
 				root: {
 					width: '100%',
-					paddingTop: theme.spacing(4),
-					paddingBottom: theme.spacing(2),
+					paddingTop: theme.spacing(8),
+					paddingBottom: theme.spacing(4),
 					color: theme.palette.text.primary,
 					textAlign: "center"
 				},
@@ -25,7 +25,7 @@ const ContentHeader = ({title}) => {
 
 	return (
 			<Box className={classes.root}>
-				<Typography variant="h5" component="h2" className={classes.header}>
+				<Typography variant="h4" component="h2" className={classes.header}>
 					<FormattedMessage id={title}/>
 				</Typography>
 			</Box>

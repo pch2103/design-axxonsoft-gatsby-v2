@@ -13,5 +13,6 @@ module.exports = {
   'Fonts': 'Fonts',
   'Download': 'Download',
   'Contents': 'Table of contents:',
-  'AxxonNext': 'Axxon Next Logos'
+  'AxxonNext': 'Axxon Next Logos',
+  'LogoGroup': 'ITV GROUP Logos'
 };

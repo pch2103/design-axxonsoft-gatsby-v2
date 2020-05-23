@@ -13,9 +13,9 @@ const useStyles = makeStyles((theme) => {
 			})
 });
 
-const EndOfSection = () => {
+const EndOfSection = ({height = 0}) => {
 	const classes = useStyles();
-	return 	<Box className = {classes.root} />
+	return 	<Box mt={height} className = {classes.root} />
 
 };
 
