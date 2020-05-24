@@ -23,6 +23,7 @@ export default function (props) {
 			<Layout location={props.location}>
 				<SEO title={'AxxonSoft Ltd. Brand identity'} lang={props.pageContext.langKey}/>
 				<PageBanner location={props.location}/>
+
 				<section style={{display: "flex"}}>
 
 					<Container maxWidth="lg">
@@ -117,7 +118,7 @@ export default function (props) {
 						<EndOfSection/>
 
 						<Grid name={pageSection[4].label} container spacing={2}>
-							<Grid name={pageSection[4].label} item xs={12}>
+							<Grid item xs={12}>
 								<ContentHeader title={'Fonts'}/>
 							</Grid>
 							<Grid item xs={12} sm={3}>

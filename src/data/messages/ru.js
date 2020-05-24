@@ -14,5 +14,8 @@ module.exports = {
   'Download': 'Скачать',
   'Contents': 'Содержание:',
   'AxxonNext': 'Логотипы Axxon Next ',
-  'LogoGroup': 'Логотипы Ipdrom, Noder, Рубикон'
+  'LogoGroup': 'Логотипы Ipdrom, Noder, Рубикон',
+  'Next4': 'Axxox Next 4',
+  'Intellect': 'Intellect',
+  'Net': 'Axxon Net',
 };
