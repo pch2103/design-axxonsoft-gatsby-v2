@@ -14,9 +14,9 @@ const useStyles = makeStyles((theme) => {
 					color: theme.palette.text.primary,
 					textAlign: "center"
 				},
-				header: {
-					textTransform: "uppercase",
-				},
+				// header: {
+				// 	textTransform: "uppercase",
+				// },
 			})
 });
 
@@ -25,7 +25,7 @@ const ContentHeader = ({title}) => {
 
 	return (
 			<Box className={classes.root}>
-				<Typography variant="h4" component="h2" className={classes.header}>
+				<Typography variant="h3" component="h2" className={classes.header}>
 					<FormattedMessage id={title}/>
 				</Typography>
 			</Box>

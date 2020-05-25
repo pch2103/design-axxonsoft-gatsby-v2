@@ -11,6 +11,9 @@ const generalTheme = {
 			'Arial',
 			'sans-serif',
 		].join(','),
+		h3: {
+			fontWeight: 600,
+		},
 		h4: {
 			fontWeight: 600,
 		},

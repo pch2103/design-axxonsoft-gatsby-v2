@@ -15,7 +15,7 @@ module.exports = {
   'Contents': 'Table of contents:',
   'AxxonNext': 'Axxon Next Logos',
   'LogoGroup': 'ITV GROUP Logos',
-  'Next4': 'Axxox Next 4',
+  'Next4': 'Axxon Next 4',
   'Intellect': 'Intellect',
   'Net': 'Axxon Net',
 };

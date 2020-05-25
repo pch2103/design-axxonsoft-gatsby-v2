@@ -68,9 +68,58 @@ export default function (props) {
 							<PageCard cardName="Next4Interface" landscape={true}/>
 						</Grid>
 
+						<EndOfSection height={2}/>
+
 						<Grid id={pageSection[1].label} item xs={12}>
 							<ContentHeader title={'Intellect'}/>
-							<DummyText/>
+							<Grid item xs={12} sm={12}>
+								<PageCard cardName="IntellectLogo" landscape={true}/>
+							</Grid>
+							<Grid item xs={12} sm={12}>
+								<PageCard cardName="IntellectLiteLogo" landscape={true}/>
+							</Grid>
+						</Grid>
+
+						<EndOfSection height={2}/>
+
+						<Grid container spacing={2}>
+							<Grid item xs={12} sm={4}>
+								<PageCard cardName="IntellectLogoInv"/>
+							</Grid>
+							<Grid item xs={12} sm={4}>
+								<PageCard cardName="IntellectBackground"/>
+							</Grid>
+							<Grid item xs={12} sm={4}>
+								<PageCard cardName="IntellectSign"/>
+							</Grid>
+						</Grid>
+
+						<EndOfSection height={2}/>
+
+						<Grid container spacing={2}>
+							<Grid item xs={12} sm={4}>
+								<PageCard cardName="ACFAIntellect"/>
+							</Grid>
+							<Grid item xs={12} sm={4}>
+								<PageCard cardName="ATMIntellect"/>
+							</Grid>
+							<Grid item xs={12} sm={4}>
+								<PageCard cardName="AutoIntellect"/>
+							</Grid>
+						</Grid>
+
+						<EndOfSection />
+
+						<Grid container spacing={2}>
+							<Grid item xs={12} sm={4}>
+								<PageCard cardName="FaceIntellect"/>
+							</Grid>
+							<Grid item xs={12} sm={4}>
+								<PageCard cardName="RetailIntellect"/>
+							</Grid>
+							<Grid item xs={12} sm={4}>
+								<PageCard cardName="RailwayIntellect"/>
+							</Grid>
 						</Grid>
 
 						<EndOfSection />
