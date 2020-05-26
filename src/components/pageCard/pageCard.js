@@ -1,7 +1,6 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/core/styles";
 import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import CardActions from "@material-ui/core/CardActions";
@@ -27,6 +26,7 @@ const useStyles = makeStyles((theme) => (
 			},
 			content: {
 				padding: 0,
+				margin: 0,
 			},
 			contentCentered: {
 				margin: 'auto',
@@ -91,7 +91,7 @@ const PageCard = ({cardContent, ...props}) => {
 							title={cardContent.image.title}
 					/>
 					}
-					<CardContent className={contentStyle}>
+					<div className={contentStyle}>
 						{cardContent.title &&
 						<Typography className={classes.title} variant="h6">
 							{cardContent.title}
@@ -102,7 +102,7 @@ const PageCard = ({cardContent, ...props}) => {
 									source={cardContent.text}
 							/>
 						</Typography>
-					</CardContent>
+					</div>
 					</section>
 					<div className={classes.cardAction}>
 						{cardContent.downloadUrl &&
