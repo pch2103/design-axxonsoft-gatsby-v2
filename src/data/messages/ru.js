@@ -18,4 +18,6 @@ module.exports = {
   'Next4': 'Axxon Next 4',
   'Intellect': 'Intellect',
   'Net': 'Axxon Net',
+  'Brochures': 'Брошюры',
+  'Stationery': 'Канцелярские принадлежности'
 };
