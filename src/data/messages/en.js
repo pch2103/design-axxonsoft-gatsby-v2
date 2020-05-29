@@ -19,5 +19,6 @@ module.exports = {
   'Intellect': 'Intellect',
   'Net': 'Axxon Net',
   'Brochures': 'Brochures',
-  'Stationery': 'Stationery'
+  'Stationery': 'Stationery',
+  'Graphics for publications': 'Graphics for publications',
 };

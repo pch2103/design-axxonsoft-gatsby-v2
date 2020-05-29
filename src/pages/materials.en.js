@@ -3,7 +3,6 @@ import Container from '@material-ui/core/Container';
 import Layout from "../layout/layout";
 import SEO from "../components/seo";
 import PageBanner from "../components/pageBanner/en";
-import DummyText from "../components/dummyText";
 import Grid from "@material-ui/core/Grid";
 import ContentHeader from "../components/contntItems/contentHeader";
 import PageCard from "../components/pageCard/en";
@@ -15,6 +14,7 @@ export default function (props) {
 	const pageSection = [
 		{label: 'Brochures'},
 		{label: 'Stationery'},
+		{label: 'Graphics for publications'},
 	];
 
 	return (
@@ -47,21 +47,41 @@ export default function (props) {
 							<Grid item xs={12}>
 								<ContentHeader title={'Stationery'}/>
 							</Grid>
-							<Grid item xs={12} sm={3}>
+							<Grid item xs={12} sm={6}>
 								<PageCard cardName="Envelopes"/>
 							</Grid>
-							<Grid item xs={12} sm={3}>
+							<Grid item xs={12} sm={6}>
 								<PageCard cardName="Folder"/>
 							</Grid>
-							<Grid item xs={12} sm={3}>
+							<Grid item xs={12} sm={6}>
 								<PageCard cardName="Blocknote"/>
 							</Grid>
-							<Grid item xs={12} sm={3}>
+							<Grid item xs={12} sm={6}>
 								<PageCard cardName="Pen"/>
 							</Grid>
 						</Grid>
-						<DummyText/>
-						<DummyText/>
+
+						<EndOfSection height={2}/>
+
+						<Grid name={pageSection[2].label} container spacing={2}>
+							<Grid item xs={12}>
+								<ContentHeader title={'Graphics for publications'}/>
+							</Grid>
+							<Grid item xs={12} sm={12}>
+								<PageCard cardName="FeaturesIcons" landscape={true}/>
+							</Grid>
+							<EndOfSection height={2}/>
+							<Grid item xs={12} sm={12}>
+								<PageCard cardName="AxxonNextScreenshots" landscape={true}/>
+							</Grid>
+							<EndOfSection height={2}/>
+							<Grid item xs={12} sm={12}>
+								<PageCard cardName="IntellectScreenshots" landscape={true}/>
+							</Grid>
+						</Grid>
+
+						<EndOfSection height={2}/>
+
 				</Container>
 
 					<article>

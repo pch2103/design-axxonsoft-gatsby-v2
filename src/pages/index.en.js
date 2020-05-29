@@ -28,7 +28,7 @@ export default function (props) {
 
 					<Container maxWidth="lg">
 
-						<Grid name={pageSection[0].label} container spacing={2}>
+						<Grid name={pageSection[0].label} container spacing={4}>
 							<Grid item xs={12}>
 								<ContentHeader title={'Logotype'}/>
 							</Grid>
