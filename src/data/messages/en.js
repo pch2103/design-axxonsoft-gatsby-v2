@@ -21,4 +21,6 @@ module.exports = {
   'Brochures': 'Brochures',
   'Stationery': 'Stationery',
   'Graphics for publications': 'Graphics for publications',
+  'Hybrid': '"Hybrid" type',
+  'Island': '"Island" type',
 };
