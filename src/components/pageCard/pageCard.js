@@ -63,7 +63,6 @@ const useStyles = makeStyles((theme) => (
 			},
 		}
 ))
-
 const PageCard = ({cardContent, ...props}) => {
 	const classes = useStyles();
 
