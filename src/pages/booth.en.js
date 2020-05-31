@@ -9,6 +9,7 @@ import EndOfSection from "../components/contntItems/endOfSection";
 import PageImage from "../components/pageImage/en";
 import Hidden from "@material-ui/core/Hidden";
 import ContentMenu from "../components/contentMenu/contentMenu";
+import PageText from "../components/pageText/en";
 
 export default function (props) {
 	const pageSection = [
@@ -34,10 +35,19 @@ export default function (props) {
 								<PageImage cardName="BoothSample1"/>
 							</Grid>
 							<Grid item xs={12} sm={6}>
+								<PageText cardName="boothText1"/>
+							</Grid>
+							<Grid item xs={12} sm={6}>
+								<PageText cardName="boothText2"/>
+							</Grid>
+							<Grid item xs={12} sm={6}>
 								<PageImage cardName="BoothSample3"/>
 							</Grid>
 							<Grid item xs={12} sm={6}>
 								<PageImage cardName="BoothSample4"/>
+							</Grid>
+							<Grid item xs={12} sm={12}>
+								<PageText attention={true} cardName="bootTextInfo1"/>
 							</Grid>
 						</Grid>
 						<EndOfSection height={2}/>
