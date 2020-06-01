@@ -50,8 +50,32 @@ export default function (props) {
 								<PageText attention={true} cardName="bootTextInfo1"/>
 							</Grid>
 						</Grid>
+
 						<EndOfSection height={2}/>
 
+						<Grid name={pageSection[1].label} container spacing={4}>
+							<Grid item xs={12}>
+								<ContentHeader title={'Island'}/>
+							</Grid>
+							<Grid item xs={12} sm={6}>
+								<PageImage cardName="BoothSample5"/>
+							</Grid>
+							<Grid item xs={12} sm={6}>
+								<PageImage cardName="BoothSample6"/>
+							</Grid>
+							<Grid item xs={12} sm={6}>
+								<PageText cardName="boothText3"/>
+							</Grid>
+							<Grid item xs={12} sm={6}>
+								<PageText cardName="boothText4"/>
+							</Grid>
+							<Grid item xs={12} sm={6}>
+								<PageImage cardName="BoothSample7"/>
+							</Grid>
+							<Grid item xs={12} sm={6}>
+								<PageImage cardName="BoothSample8"/>
+							</Grid>
+						</Grid>
 
 					</Container>
 
