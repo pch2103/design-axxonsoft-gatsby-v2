@@ -14,6 +14,7 @@ export default ({cardName, ...props}) => {
         	textEN {
           	textEN
         	}
+        downloadUrlEN
       	}
     	}
     }
@@ -32,6 +33,7 @@ export default ({cardName, ...props}) => {
 			title: cardDraft.node.titleEN || '',
 			text: cardDraft.node.textEN
 					? cardDraft.node.textEN.textEN || '' : '',
+			downloadUrl: cardDraft.node.downloadUrlEN || ''
 		}
 	}
 

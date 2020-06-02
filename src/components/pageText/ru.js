@@ -14,6 +14,7 @@ export default ({cardName, ...props}) => {
         	textRU {
           	textRU
         	}
+        	downloadUrlRU
       	}
     	}
     }
@@ -32,6 +33,7 @@ export default ({cardName, ...props}) => {
 			title: cardDraft.node.titleRU || '',
 			text: cardDraft.node.textRU
 					? cardDraft.node.textRU.textRU || '' : '',
+			downloadUrl: cardDraft.node.downloadUrlRU || ''
 		}
 	}
 

@@ -23,4 +23,6 @@ module.exports = {
   'Graphics for publications': 'Graphics for publications',
   'Hybrid': '"Hybrid" type',
   'Island': '"Island" type',
+  'WorkStations': 'Work Stations & Receptions',
+  'DownloadMaterials': 'Download materials',
 };

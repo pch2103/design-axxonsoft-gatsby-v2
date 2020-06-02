@@ -15,6 +15,8 @@ export default function (props) {
 	const pageSection = [
 		{label: 'Hybrid'},
 		{label: 'Island'},
+		{label: 'WorkStations'},
+		{label: 'DownloadMaterials'},
 	];
 	return (
 			<Layout location={props.location}>
@@ -76,6 +78,46 @@ export default function (props) {
 								<PageImage cardName="BoothSample8"/>
 							</Grid>
 						</Grid>
+
+						<EndOfSection height={2}/>
+
+						<Grid name={pageSection[2].label} container spacing={4}>
+							<Grid item xs={12}>
+								<ContentHeader title={'WorkStations'}/>
+							</Grid>
+							<Grid item xs={12} sm={6}>
+								<PageImage cardName="BoothSample9"/>
+							</Grid>
+							<Grid item xs={12} sm={6}>
+								<PageImage cardName="BoothSample10"/>
+							</Grid>
+							<Grid item xs={12} sm={6}>
+								<PageText cardName="boothText6"/>
+							</Grid>
+							<Grid item xs={12} sm={6}>
+								<PageText cardName="boothText7"/>
+							</Grid>
+						</Grid>
+
+						<EndOfSection height={2}/>
+
+						<Grid name={pageSection[3].label} container spacing={4}>
+							<Grid item xs={12}>
+								<ContentHeader title={'DownloadMaterials'}/>
+							</Grid>
+							<Grid item xs={12} sm={12}>
+								<PageImage cardName="BoothSample11"/>
+							</Grid>
+							<Grid item xs={12} sm={12}>
+								<PageText download={true} cardName="bootTextInfo2"/>
+							</Grid>
+							<Grid item xs={12} sm={12}>
+								<PageText download={true} cardName="bootTextInfo3"/>
+							</Grid>
+						</Grid>
+
+						<EndOfSection height={2}/>
+
 					</Container>
 
 					<article>

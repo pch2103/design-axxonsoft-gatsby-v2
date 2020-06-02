@@ -23,4 +23,6 @@ module.exports = {
   'Graphics for publications': 'Графика для публикаций',
   'Hybrid': "Стандартные стенды",
   'Island': "Специальные стенды",
+  'WorkStations': 'Ресепшен и рабочие зоны',
+  'DownloadMaterials': 'Материалы для скачивания',
 };

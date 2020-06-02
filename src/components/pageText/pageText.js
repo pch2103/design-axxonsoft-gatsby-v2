@@ -1,11 +1,14 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import Grid from "@material-ui/core/Grid";
 import ReactMarkdown from "react-markdown";
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import WarningIcon from '@material-ui/icons/WarningTwoTone';
 import clsx from "clsx";
+import Button from "@material-ui/core/Button";
+import {Link} from "@material-ui/core";
+import GetIcon from "../utils/getIcon";
+import {FormattedMessage} from "react-intl";
 
 const useStyles = makeStyles((theme) => (
 		{
@@ -24,6 +27,10 @@ const useStyles = makeStyles((theme) => (
 				border: `${theme.palette.divider} 1px solid`,
 				boxShadow: `2px 2px 6px rgba(0, 0, 0, 0.1)`,
 			},
+			download: {
+				textAlign: "center",
+				flexDirection: 'column',
+			},
 			iconInfo: {
 				width: 32,
 				height: 32,
@@ -36,6 +43,15 @@ const useStyles = makeStyles((theme) => (
 			marginLeft: 8,
 			color: theme.palette.warning.main,
 		},
+			button: {
+				margin: theme.spacing(1),
+				background: theme.palette.secondary.main,
+				color: theme.palette.primary.contrastText,
+				'&:hover': {
+					textDecoration: 'none',
+					background: theme.palette.secondary.dark,
+				},
+			},
 			shortDivider: {
 				width: '33%',
 			},
@@ -45,18 +61,16 @@ const useStyles = makeStyles((theme) => (
 const PageText = ({cardContent, ...props}) => {
 	const classes = useStyles();
 
-	const infoStyle = clsx(classes.info, props.attention && classes.attention)
+	const infoStyle = clsx(classes.info, props.download && classes.download,
+			(props.attention || props.download) && classes.attention)
 
 	return (
-			<Grid container spacing={2}>
-				{cardContent.title &&
-				<Grid item xs={12}>
+				<div >
+					{cardContent.title &&
 					<Typography variant="h6">
 						{cardContent.title}
 					</Typography>
-				</Grid>
-				}
-				<Grid item xs={12}>
+					}
 					{cardContent.text &&
 					<div className={infoStyle}>
 						{props.info &&
@@ -70,11 +84,23 @@ const PageText = ({cardContent, ...props}) => {
 									source={cardContent.text}
 							/>
 						</Typography>
+						{
+							cardContent.downloadUrl &&
+							<Button
+									href={cardContent.downloadUrl}
+									component={Link}
+									target="_blank"
+									className={classes.button}
+									variant="contained"
+									startIcon={<GetIcon icon="Download"/>}
+									>
+								<FormattedMessage id='Download'/>
+							</Button>
+
+						}
 					</div>
 					}
-				</Grid>
-
-			</Grid>
+				</div>
 	)
 };
 
