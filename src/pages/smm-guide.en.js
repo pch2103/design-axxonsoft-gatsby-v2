@@ -136,9 +136,7 @@ export default function (props) {
 							<Grid item xs={12} sm={4}>
 								<PageCard mediaHeigt={100} cardName="SmmImageSample18"/>
 							</Grid>
-
 							<EndOfSection/>
-
 							<Grid item xs={12} sm={12}>
 								<PageText download={true} cardName="SmmText4"/>
 							</Grid>
