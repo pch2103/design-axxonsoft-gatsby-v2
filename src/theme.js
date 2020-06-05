@@ -62,6 +62,7 @@ const theme = createMuiTheme(Object.assign(generalTheme, {
 		page: {
 			main: '#E2E2E2',
 			contrastText: '#000',
+			url: '273DE8'
 		},
 	},
 }));
@@ -99,6 +100,7 @@ const dark_theme = createMuiTheme(Object.assign(generalTheme,{
 		page: {
 			main: '#404040',
 			contrastText: '#fff',
+			url: '#ff9100',
 		},
 	},
 }));

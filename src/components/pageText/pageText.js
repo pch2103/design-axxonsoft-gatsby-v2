@@ -2,8 +2,6 @@ import React from 'react';
 import {makeStyles} from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import ReactMarkdown from "react-markdown";
-import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
-import WarningIcon from '@material-ui/icons/WarningTwoTone';
 import clsx from "clsx";
 import Button from "@material-ui/core/Button";
 import {Link} from "@material-ui/core";
@@ -20,7 +18,7 @@ const useStyles = makeStyles((theme) => (
 				alignItems: 'center',
 			},
 			attention: {
-				borderRadius:4,
+				borderRadius: 4,
 				background: theme.palette.background.paper,
 				padding: 12,
 				width: '100%',
@@ -32,17 +30,16 @@ const useStyles = makeStyles((theme) => (
 				flexDirection: 'column',
 			},
 			iconInfo: {
-				width: 32,
-				height: 32,
-				marginLeft: 8,
+				marginRight: theme.spacing(2),
+				marginLeft: theme.spacing(1),
+				display: 'flex',
 				color: theme.palette.info.main,
 			},
-			iconAttention: {
-			width: 32,
-			height: 32,
-			marginLeft: 8,
-			color: theme.palette.warning.main,
-		},
+			iconWarning: {
+				margin: theme.spacing(1),
+				display: 'flex',
+				color: theme.palette.warning.main,
+			},
 			button: {
 				margin: theme.spacing(1),
 				background: theme.palette.secondary.main,
@@ -52,8 +49,14 @@ const useStyles = makeStyles((theme) => (
 					background: theme.palette.secondary.dark,
 				},
 			},
-			shortDivider: {
-				width: '33%',
+			text: {
+				'& a': {
+					color: theme.palette.page.url,
+					textDecoration: 'none'
+				},
+				'& a:hover': {
+					textDecoration: 'underline'
+				},
 			},
 		}
 ))
@@ -62,45 +65,51 @@ const PageText = ({cardContent, ...props}) => {
 	const classes = useStyles();
 
 	const infoStyle = clsx(classes.info, props.download && classes.download,
-			(props.attention || props.download) && classes.attention)
+			(
+					props.attention || props.download || props.email) && classes.attention)
 
 	return (
-				<div >
-					{cardContent.title &&
-					<Typography variant="h6">
-						{cardContent.title}
-					</Typography>
-					}
-					{cardContent.text &&
-					<div className={infoStyle}>
-						{props.info &&
-						<InfoOutlinedIcon className={classes.iconInfo}/>
-						}
-						{props.attention &&
-						<WarningIcon className={classes.iconAttention}/>
-						}
-						<Typography variant="body1" component={'span'}>
-							<ReactMarkdown
-									source={cardContent.text}
-							/>
-						</Typography>
-						{
-							cardContent.downloadUrl &&
-							<Button
-									href={cardContent.downloadUrl}
-									component={Link}
-									target="_blank"
-									className={classes.button}
-									variant="contained"
-									startIcon={<GetIcon icon="Download"/>}
-									>
-								<FormattedMessage id='Download'/>
-							</Button>
-
-						}
+			<div>
+				{cardContent.title &&
+				<Typography variant="h6">
+					{cardContent.title}
+				</Typography>
+				}
+				{cardContent.text &&
+				<div className={infoStyle}>
+					{props.email &&
+					<div className={classes.iconInfo}>
+						<GetIcon medium={true} icon="Email"/>
 					</div>
 					}
+					{props.attention &&
+					<div className={classes.iconWarning}>
+						<GetIcon medium={true} icon="Warning"/>
+					</div>
+					}
+					<Typography variant="body1" component={'span'}>
+						<ReactMarkdown
+								className={classes.text}
+								source={cardContent.text}
+						/>
+					</Typography>
+					{
+						cardContent.downloadUrl &&
+						<Button
+								href={cardContent.downloadUrl}
+								component={Link}
+								target="_blank"
+								className={classes.button}
+								variant="contained"
+								startIcon={<GetIcon icon="Download"/>}
+						>
+							<FormattedMessage id='Download'/>
+						</Button>
+
+					}
 				</div>
+				}
+			</div>
 	)
 };
 

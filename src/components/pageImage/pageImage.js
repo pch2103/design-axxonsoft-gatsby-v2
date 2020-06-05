@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Img from "gatsby-image";
 import Grid from "@material-ui/core/Grid";
 import ReactMarkdown from "react-markdown";
-import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
+import GetIcon from "../utils/getIcon";
 
 const useStyles = makeStyles((theme) => (
 		{
@@ -21,9 +21,8 @@ const useStyles = makeStyles((theme) => (
 				alignItems: 'center',
 			},
 			icon: {
-				width: 20,
-				height: 20,
-				marginRight: 4,
+				marginRight: theme.spacing(0.5),
+				display: 'flex',
 				color: theme.palette.info.main,
 			},
 			shortDivider: {
@@ -53,7 +52,9 @@ const PageImage = ({cardContent}) => {
 					}
 					{cardContent.text &&
 					<div className={classes.info}>
-						<InfoOutlinedIcon className={classes.icon}/>
+						<div className={classes.icon}>
+							<GetIcon small={true} icon="Info"/>
+						</div>
 						<Typography variant="body2" component={'span'}>
 							<ReactMarkdown
 									source={cardContent.text}

@@ -25,4 +25,8 @@ module.exports = {
   'Island': "Специальные стенды",
   'WorkStations': 'Ресепшен и рабочие зоны',
   'DownloadMaterials': 'Материалы для скачивания',
+  'HowToDesign': 'How to design the post image?',
+  'HowToDesignPostImage': 'Как подготовить изображения для баннера?',
+  'Vanguard': '«Авангардный» стиль',
+  'Standard': '«Стандартный» стиль',
 };

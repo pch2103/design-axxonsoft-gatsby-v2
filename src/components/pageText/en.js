@@ -26,7 +26,6 @@ export default ({cardName, ...props}) => {
 					.find(({node}) => cardName === node.cardName)
 	), [data, cardName])
 
-
 	if (cardDraft) {
 		cardContent = {
 			id: cardDraft.node.id || '',
@@ -36,7 +35,6 @@ export default ({cardName, ...props}) => {
 			downloadUrl: cardDraft.node.downloadUrlEN || ''
 		}
 	}
-
 
 	return <PageText cardContent={cardContent} {...props}/>
 }

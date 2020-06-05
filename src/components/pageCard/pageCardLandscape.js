@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => (
 			},
 			media: {
 				display: "flex",
+				margin: 'auto',
 				maxWidth: "100%",
 				border: `${theme.palette.divider} 1px solid`,
 			},
@@ -45,12 +46,12 @@ const useStyles = makeStyles((theme) => (
 		}
 ))
 
-const PageCardLandscape = ({cardContent}) => {
+const PageCardLandscape = ({cardContent, ...props}) => {
 	const classes = useStyles();
-
+	const startWidth = props.small ? 4 : 6;
 	return (
-			<Grid container spacing={6}>
-				<Grid item xs={12} sm={6}>
+			<Grid container spacing={startWidth-2}>
+				<Grid item xs={12} sm={startWidth}>
 					{cardContent.image && cardContent.image.fluid === null &&
 					<img src={cardContent.image.file.url} alt={cardContent.image.title} className={classes.media}/>
 					}
@@ -58,15 +59,15 @@ const PageCardLandscape = ({cardContent}) => {
 					<Img fluid={cardContent.image.fluid} className={classes.media}/>
 					}
 				</Grid>
-				<Grid item xs={12} sm={6}>
+				<Grid item xs={12} sm={12-startWidth}>
 					<section className={classes.content}>
 						<div className={classes.text}>
 							{cardContent.title &&
-							<Typography variant="h4">
+							<Typography variant={props.small ? 'h6' : 'h4'}>
 								{cardContent.title}
 							</Typography>
 							}
-							<Typography variant="body1" component={'span'}>
+							<Typography variant={props.small ? 'body2' : 'body1'} component={'span'}>
 								<ReactMarkdown
 										source={cardContent.text}
 								/>

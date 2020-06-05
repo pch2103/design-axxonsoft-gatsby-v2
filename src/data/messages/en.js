@@ -25,4 +25,7 @@ module.exports = {
   'Island': '"Island" type',
   'WorkStations': 'Work Stations & Receptions',
   'DownloadMaterials': 'Download materials',
+  'HowToDesignPostImage': 'How to design the post image?',
+  'Vanguard': '"Vanguard" style',
+  'Standard': '"Standard" style',
 };

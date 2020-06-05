@@ -40,7 +40,7 @@ export default function (props) {
 							</Grid>
 						</Grid>
 
-						<EndOfSection/>
+						<EndOfSection height={2}/>
 
 						<Grid name={pageSection[1].label} container spacing={2}>
 							<Grid item xs={12}>
@@ -57,7 +57,7 @@ export default function (props) {
 							</Grid>
 						</Grid>
 
-						<EndOfSection/>
+						<EndOfSection height={2}/>
 
 						<Grid name={pageSection[2].label} container spacing={2}>
 							<Grid item xs={12}>
@@ -89,7 +89,7 @@ export default function (props) {
 							</Grid>
 						</Grid>
 
-						<EndOfSection/>
+						<EndOfSection height={2}/>
 
 						<Grid name={pageSection[3].label} container spacing={2}>
 							<Grid item xs={12}>
@@ -115,7 +115,7 @@ export default function (props) {
 							</Grid>
 						</Grid>
 
-						<EndOfSection/>
+						<EndOfSection height={2}/>
 
 						<Grid name={pageSection[4].label} container spacing={2}>
 							<Grid item xs={12}>
@@ -144,7 +144,7 @@ export default function (props) {
 								</Grid>
 							</Grid>
 
-							<EndOfSection/>
+							<EndOfSection height={2}/>
 
 							<Grid item xs={12} sm={3}>
 								<PageCard cardName="SecondaryTypeface"/>
