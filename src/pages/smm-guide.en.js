@@ -10,12 +10,13 @@ import PageCard from "../components/pageCard/en";
 import EndOfSection from "../components/contntItems/endOfSection";
 import Hidden from "@material-ui/core/Hidden";
 import ContentMenu from "../components/contentMenu/contentMenu";
+import PageImage from "../components/pageImage/en";
 
 export default function (props) {
 	const pageSection = [
 		{label: 'Vanguard'},
 		{label: 'Standard'},
-
+		{label: 'SpecialTemplates'},
 	];
 	return (
 			<Layout location={props.location}>
@@ -140,11 +141,79 @@ export default function (props) {
 							<Grid item xs={12} sm={12}>
 								<PageText download={true} cardName="SmmText4"/>
 							</Grid>
-
 						</Grid>
 
 						<EndOfSection height={2}/>
 
+						<Grid name={pageSection[2].label} container spacing={2}>
+							<Grid item xs={12}>
+								<ContentHeader title={'SpecialTemplates'}/>
+								<ContentHeader subheader={true} title={'Post with a screenshot'}/>
+							</Grid>
+							<EndOfSection height={2}/>
+							<Grid container item xs={12} sm={4}>
+								<Grid item xs={12}>
+									<PageCard cardName="SmmText5" buttonText={'Download mockups'}/>
+								</Grid>
+								<EndOfSection height={2}/>
+								<Grid item xs={12}>
+									<PageCard cardName="SmmText6" buttonText={'Download template'}/>
+								</Grid>
+							</Grid>
+							<Grid container item xs={12} sm={4}>
+								<PageImage cardName="SmmImageSample20"/>
+							</Grid>
+							<Grid container item xs={12} sm={4}>
+								<PageImage cardName="SmmImageSample19"/>
+							</Grid>
+							<Grid item xs={6} sm={3}>
+								<PageCard centered={true} cardName="SmmColorTemplate1"/>
+							</Grid>
+							<Grid item xs={6} sm={3}>
+								<PageCard centered={true} cardName="SmmColorTemplate2"/>
+							</Grid>
+							<Grid item xs={6} sm={3}>
+								<PageCard centered={true} cardName="SmmColorTemplate3"/>
+							</Grid>
+							<Grid item xs={6} sm={3}>
+								<PageCard centered={true} cardName="SmmColorTemplate4"/>
+							</Grid>
+
+							<EndOfSection height={4}/>
+
+							<Grid item xs={12}>
+								<ContentHeader subheader={true} title={'Post with a product logo'}/>
+							</Grid>
+							<EndOfSection height={2}/>
+							<Grid container item xs={12} sm={4}>
+								<Grid item xs={12}>
+									<PageCard cardName="SmmText7"/>
+								</Grid>
+								<EndOfSection height={2}/>
+								<Grid item xs={12}>
+									<PageCard cardName="SmmText6" buttonText={'Download template'}/>
+								</Grid>
+							</Grid>
+							<Grid container item xs={12} sm={4}>
+								<PageImage cardName="SmmImageSample21"/>
+							</Grid>
+							<Grid container item xs={12} sm={4}>
+								<PageImage cardName="SmmImageSample22"/>
+							</Grid>
+							<Grid item xs={6} sm={3}>
+								<PageCard centered={true} cardName="SmmColorTemplate1"/>
+							</Grid>
+							<Grid item xs={6} sm={3}>
+								<PageCard centered={true} cardName="SmmColorTemplate5"/>
+							</Grid>
+							<Grid item xs={6} sm={3}>
+								<PageCard centered={true} cardName="SmmColorTemplate6"/>
+							</Grid>
+							<Grid item xs={6} sm={3}>
+								<PageCard centered={true} cardName="SmmColorTemplate4"/>
+							</Grid>
+						</Grid>
+						<EndOfSection height={2}/>
 					</Container>
 
 					<article>

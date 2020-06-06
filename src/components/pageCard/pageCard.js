@@ -115,7 +115,8 @@ const PageCard = ({cardContent, ...props}) => {
 									color="primary"
 									startIcon={<GetIcon icon="Download"/>}
 							>
-								<FormattedMessage id='Download'/>
+
+								<FormattedMessage id={props.buttonText ? props.buttonText : 'Download'}/>
 							</Button>
 						</CardActions>
 						}

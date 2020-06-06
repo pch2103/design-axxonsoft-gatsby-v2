@@ -9,25 +9,32 @@ const useStyles = makeStyles((theme) => {
 			{
 				root: {
 					width: '100%',
-					paddingTop: theme.spacing(8),
-					paddingBottom: theme.spacing(4),
 					color: theme.palette.text.primary,
 					textAlign: "center"
 				},
-				// header: {
-				// 	textTransform: "uppercase",
-				// },
+				header:{
+					paddingTop: theme.spacing(8),
+					paddingBottom: theme.spacing(4),
+				},
+				subheader: {
+					textTransform: "uppercase",
+				},
 			})
 });
 
-const ContentHeader = ({title}) => {
+const ContentHeader = ({title, ...props}) => {
 	const classes = useStyles();
 
 	return (
 			<Box className={classes.root}>
-				<Typography variant="h3" component="h2" className={classes.header}>
-					<FormattedMessage id={title}/>
-				</Typography>
+				{ props.subheader
+				? <Typography variant="h5" component="h4" className={classes.subheader}>
+						<FormattedMessage id={title}/>
+					</Typography>
+				: <Typography variant="h3" component="h2" className={classes.header}>
+						<FormattedMessage id={title}/>
+					</Typography>
+				}
 			</Box>
 	)
 };

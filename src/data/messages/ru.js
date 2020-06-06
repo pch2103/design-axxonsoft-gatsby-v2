@@ -28,5 +28,9 @@ module.exports = {
   'HowToDesign': 'How to design the post image?',
   'HowToDesignPostImage': 'Как подготовить изображения для баннера?',
   'Vanguard': '«Авангардный» стиль',
-  'Standard': '«Стандартный» стиль',
+  'SpecialTemplates': 'Специальные шаблоны',
+  'Post with a screenshot': 'Пост со скриншотом (продукта)',
+  'Download mockups': 'Скачать макеты',
+  'Download template': 'Скачать шаблон',
+  'Post with a product logo': 'Пост с логотипом продукта',
 };

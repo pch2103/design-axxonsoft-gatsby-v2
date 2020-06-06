@@ -28,4 +28,9 @@ module.exports = {
   'HowToDesignPostImage': 'How to design the post image?',
   'Vanguard': '"Vanguard" style',
   'Standard': '"Standard" style',
+  'SpecialTemplates': 'Special Templates',
+  'Post with a screenshot': 'Post with a screenshot',
+  'Download mockups': 'Download mockups',
+  'Download template': 'Download template',
+  'Post with a product logo': 'Post with a product logo',
 };
