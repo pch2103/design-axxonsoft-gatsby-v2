@@ -7,6 +7,7 @@ import Button from "@material-ui/core/Button";
 import {Link} from "@material-ui/core";
 import GetIcon from "../utils/getIcon";
 import {FormattedMessage} from "react-intl";
+import Hidden from "@material-ui/core/Hidden";
 
 const useStyles = makeStyles((theme) => (
 		{
@@ -50,6 +51,9 @@ const useStyles = makeStyles((theme) => (
 				},
 			},
 			text: {
+				[theme.breakpoints.down('xs')]: {
+					fontSize: '0.9em',
+				},
 				'& a': {
 					color: theme.palette.page.url,
 					// textDecoration: 'none'
@@ -78,9 +82,11 @@ const PageText = ({cardContent, ...props}) => {
 				{cardContent.text &&
 				<div className={infoStyle}>
 					{props.email &&
+					<Hidden only="xs">
 					<div className={classes.iconInfo}>
 						<GetIcon medium={true} icon="Email"/>
 					</div>
+					</Hidden>
 					}
 					{props.attention &&
 					<div className={classes.iconWarning}>
