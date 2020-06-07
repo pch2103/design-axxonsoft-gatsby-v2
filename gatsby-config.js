@@ -67,5 +67,17 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: `gatsby-plugin-google-fonts-v2`,
+      options: {
+        fonts: [
+          {
+            family: 'Open+Sans',
+            variable: true,
+            weights: ['400..700']
+          }
+        ]
+      }
+    },
   ],
 };
