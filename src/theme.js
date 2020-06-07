@@ -1,12 +1,14 @@
 import {red} from '@material-ui/core/colors';
 import {createMuiTheme} from '@material-ui/core/styles';
 import {responsiveFontSizes} from "@material-ui/core";
+import './fonts/fonts.css'
 
 const generalTheme = {
 	spacing: 8,
 	typography: {
 		fontFamily: [
 			'Open Sans',
+			'Roboto',
 			'"Helvetica Neue"',
 			'Arial',
 			'sans-serif',
