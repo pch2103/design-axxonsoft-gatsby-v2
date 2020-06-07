@@ -20,7 +20,7 @@ module.exports = {
   'Net': 'Axxon Net',
   'Brochures': 'Brochures',
   'Stationery': 'Stationery',
-  'Graphics for publications': 'Graphics for publications',
+  'GraphicsForPublications': 'Graphics for publications',
   'Hybrid': '"Hybrid" type',
   'Island': '"Island" type',
   'WorkStations': 'Work Stations & Receptions',
@@ -33,4 +33,6 @@ module.exports = {
   'Download mockups': 'Download mockups',
   'Download template': 'Download template',
   'Post with a product logo': 'Post with a product logo',
+  'Post with a feature icon': 'Post with a feature icon',
+  'Post about exhibition': 'Post about exhibition',
 };

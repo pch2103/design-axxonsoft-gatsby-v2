@@ -14,7 +14,7 @@ export default function (props) {
 	const pageSection = [
 		{label: 'Brochures'},
 		{label: 'Stationery'},
-		{label: 'Graphics for publications'},
+		{label: 'GraphicsForPublications'},
 	];
 
 	return (
@@ -65,7 +65,7 @@ export default function (props) {
 
 						<Grid name={pageSection[2].label} container spacing={2}>
 							<Grid item xs={12}>
-								<ContentHeader title={'Graphics for publications'}/>
+								<ContentHeader title={'GraphicsForPublications'}/>
 							</Grid>
 							<Grid item xs={12} sm={12}>
 								<PageCard cardName="FeaturesIcons" landscape={true}/>

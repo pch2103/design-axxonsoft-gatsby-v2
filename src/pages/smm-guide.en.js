@@ -187,11 +187,11 @@ export default function (props) {
 							<EndOfSection height={2}/>
 							<Grid container item xs={12} sm={4}>
 								<Grid item xs={12}>
-									<PageCard cardName="SmmText7"/>
+									<PageText cardName="SmmText7"/>
 								</Grid>
 								<EndOfSection height={2}/>
 								<Grid item xs={12}>
-									<PageCard cardName="SmmText6" buttonText={'Download template'}/>
+									<PageCard cardName="SmmText8" buttonText={'Download template'}/>
 								</Grid>
 							</Grid>
 							<Grid container item xs={12} sm={4}>
@@ -212,7 +212,76 @@ export default function (props) {
 							<Grid item xs={6} sm={3}>
 								<PageCard centered={true} cardName="SmmColorTemplate4"/>
 							</Grid>
+
+							<EndOfSection height={4}/>
+
+							<Grid item xs={12}>
+								<ContentHeader subheader={true} title={'Post with a feature icon'}/>
+							</Grid>
+							<EndOfSection height={2}/>
+							<Grid container item xs={12} sm={4}>
+								<Grid item xs={12}>
+									<PageText cardName="SmmText9"/>
+								</Grid>
+								<EndOfSection height={2}/>
+								<Grid item xs={12}>
+									<PageCard cardName="SmmText10" buttonText={'Download template'}/>
+								</Grid>
+							</Grid>
+							<Grid container item xs={12} sm={4}>
+								<PageImage cardName="SmmImageSample23"/>
+							</Grid>
+							<Grid container item xs={12} sm={4}>
+								<PageImage cardName="SmmImageSample24"/>
+							</Grid>
+							<Grid item xs={6} sm={3}>
+								<PageCard centered={true} cardName="SmmColorTemplate1"/>
+							</Grid>
+							<Grid item xs={6} sm={3}>
+								<PageCard centered={true} cardName="SmmColorTemplate2"/>
+							</Grid>
+							<Grid item xs={6} sm={3}>
+								<PageCard centered={true} cardName="SmmColorTemplate7"/>
+							</Grid>
+							<Grid item xs={6} sm={3}>
+								<PageCard centered={true} cardName="SmmColorTemplate4"/>
+							</Grid>
+
+							<EndOfSection height={4}/>
+
+							<Grid item xs={12}>
+								<ContentHeader subheader={true} title={'Post about exhibition'}/>
+							</Grid>
+							<EndOfSection height={2}/>
+							<Grid container item xs={12} sm={4}>
+								<Grid item xs={12}>
+									<PageCard cardName="SmmText11"/>
+								</Grid>
+								<EndOfSection height={2}/>
+								<Grid item xs={12}>
+									<PageCard cardName="SmmText12" buttonText={'Download template'}/>
+								</Grid>
+							</Grid>
+							<Grid container item xs={12} sm={4}>
+								<PageImage cardName="SmmImageSample25"/>
+							</Grid>
+							<Grid container item xs={12} sm={4}>
+								<PageImage cardName="SmmImageSample26"/>
+							</Grid>
+							<Grid item xs={6} sm={3}>
+								<PageCard centered={true} cardName="SmmColorTemplate1"/>
+							</Grid>
+							<Grid item xs={6} sm={3}>
+								<PageCard centered={true} cardName="SmmColorTemplate5"/>
+							</Grid>
+							<Grid item xs={6} sm={3}>
+								<PageCard centered={true} cardName="SmmColorTemplate8"/>
+							</Grid>
+							<Grid item xs={6} sm={3}>
+								<PageCard centered={true} cardName="SmmColorTemplate4"/>
+							</Grid>
 						</Grid>
+
 						<EndOfSection height={2}/>
 					</Container>
 

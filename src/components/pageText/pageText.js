@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => (
 			text: {
 				'& a': {
 					color: theme.palette.page.url,
-					textDecoration: 'none'
+					// textDecoration: 'none'
 				},
 				'& a:hover': {
 					textDecoration: 'underline'
