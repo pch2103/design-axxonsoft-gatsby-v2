@@ -8,10 +8,16 @@ const generalTheme = {
 	typography: {
 		fontFamily: [
 			'Open Sans',
+			'-apple-system',
+			'BlinkMacSystemFont',
+			'"Segoe UI"',
 			'Roboto',
 			'"Helvetica Neue"',
 			'Arial',
 			'sans-serif',
+			'"Apple Color Emoji"',
+			'"Segoe UI Emoji"',
+			'"Segoe UI Symbol"',
 		].join(','),
 		h3: {
 			fontWeight: 600,

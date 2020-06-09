@@ -6,9 +6,11 @@ const languages = require('./src/data/languages');
 
 module.exports = {
   siteMetadata: {
-    title: 'Axxonsoft Design',
-    description: `Axxonsoft Design materials`,
-    author: [`@AxxonSoft`, '@Design_Dep'],
+    title: 'Design AxxonSoft',
+    siteUrl: 'https://www.design-axxonsoft.com',
+    description: `Axxonsoft Design materials, Axxonsoft identity guide`,
+    image: "/images/favicon.png",
+    author: [`@AxxonSoft`, '@Design_Dep', '@'],
     languages
   },
   plugins: [
