@@ -8,8 +8,6 @@ export default function TopLayout(props) {
       <Helmet>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <meta name="google-site-verification" content="4NAQzoSn5S6s2KDWW6BgV9NASkAn5RPrwJeKPx6XZr0" />
-        {/*<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"*/}
-        {/*      rel="stylesheet" />*/}
       </Helmet>
         {props.children}
     </React.Fragment>
