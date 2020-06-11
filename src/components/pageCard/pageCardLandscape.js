@@ -80,6 +80,7 @@ const PageCardLandscape = ({cardContent, ...props}) => {
 									href={cardContent.downloadUrl}
 									component={Link}
 									target="_blank"
+									rel="noopener"
 									size="small"
 									color="primary"
 									startIcon={<GetIcon icon="Download"/>}

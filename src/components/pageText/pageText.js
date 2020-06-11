@@ -105,6 +105,7 @@ const PageText = ({cardContent, ...props}) => {
 								href={cardContent.downloadUrl}
 								component={Link}
 								target="_blank"
+								rel="noopener"
 								className={classes.button}
 								variant="contained"
 								startIcon={<GetIcon icon="Download"/>}

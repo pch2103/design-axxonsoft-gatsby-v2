@@ -12,13 +12,13 @@ export default () => {
 			<Box mt={2}>
 				<Typography variant="caption" display="block" gutterBottom>
 					<FormattedMessage id='powered'/>{': '}
-					<MuiLink color="inherit" target="_blank" href="https://reactjs.org/">
+					<MuiLink color="inherit" target="_blank" rel="noopener" href="https://reactjs.org/">
 						React
 					</MuiLink>{', '}
-					<MuiLink color="inherit" target="_blank" href="https://graphql.org/">
+					<MuiLink color="inherit" target="_blank" rel="noopener" href="https://graphql.org/">
 						GraphQl
 					</MuiLink>{', '}
-					<MuiLink color="inherit" target="_blank" href="https://www.gatsbyjs.org/">
+					<MuiLink color="inherit" target="_blank" rel="noopener" href="https://www.gatsbyjs.org/">
 						Gatsby
 					</MuiLink>{', '}
 				</Typography>

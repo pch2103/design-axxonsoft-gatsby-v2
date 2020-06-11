@@ -9,7 +9,7 @@ export default function ({langKey}) {
 			<Typography variant="body2" align="center">
 				{'Copyright © '}
 				{new Date().getFullYear()}{' '}
-				<MuiLink target="_blank" href={companySiteUrl}>
+				<MuiLink target="_blank" rel="noopener" href={companySiteUrl}>
 					<FormattedMessage id='company'/>
 				</MuiLink>
 				{' '}<FormattedMessage id='copyright'/>

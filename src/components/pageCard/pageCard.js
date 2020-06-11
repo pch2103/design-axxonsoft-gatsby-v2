@@ -110,6 +110,7 @@ const PageCard = ({cardContent, ...props}) => {
 									href={cardContent.downloadUrl}
 									component={Link}
 									target="_blank"
+									rel="noopener"
 									className={classes.button}
 									size="small"
 									color="primary"
