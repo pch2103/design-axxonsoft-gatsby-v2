@@ -17,7 +17,7 @@ module.exports = {
   'LogoGroup': 'ITV GROUP Logos',
   'Next4': 'Axxon Next 4',
   'Intellect': 'Intellect',
-  'Net': 'Axxon Net',
+  'Net': 'AxxonNet',
   'Brochures': 'Brochures',
   'Stationery': 'Stationery',
   'GraphicsForPublications': 'Graphics for publications',
