@@ -43,6 +43,12 @@ export default function (props) {
 						<Grid item xs={12} sm={6}>
 							<PageCard cardName="AxxonSoftLogoInverse" />
 						</Grid>
+						<Grid item xs={12} sm={6}>
+							<PageCard cardName="ItvGroupLogo" />
+						</Grid>
+						<Grid item xs={12} sm={6}>
+							<PageCard cardName="ItvGroupLogoInverse" />
+						</Grid>
 					</Grid>
 
 					<EndOfSection height={2}/>
