@@ -9,10 +9,12 @@ import ContentHeader from "../components/contntItems/contentHeader";
 import EndOfSection from "../components/contntItems/endOfSection";
 import Hidden from "@material-ui/core/Hidden";
 import ContentMenu from "../components/contentMenu/contentMenu";
+import PageText from "../components/pageText/ru";
 
 export default function (props) {
 	const pageSection = [
 		{label: 'Logotype'},
+		{label: 'LogosGuidelines'},
 		{label: 'UsageGuidelines'},
 		{label: 'Colors'},
 		{label: 'UsageRestrictions'},
@@ -35,25 +37,34 @@ export default function (props) {
 							<PageCard cardName="ItvGroupLogo" />
 						</Grid>
 						<Grid item xs={12} sm={6}>
+							<PageCard cardName="ItvOnlyLogo" />
+						</Grid>
+						<EndOfSection/>
+					</Grid>
+					<Grid name={pageSection[1].label} container spacing={4}>
+						<Grid item xs={12} sm={12}>
+							<PageText attention={true} cardName="logosText1"/>
+						</Grid>
+
+						<EndOfSection height={2}/>
+
+						<Grid item xs={12} sm={6}>
 							<PageCard cardName="ItvGroupLogoInverse" />
 						</Grid>
+
 						<Grid item xs={12} sm={6}>
-							<PageCard cardName="AxxonSoftLogo" />
-						</Grid>
-						<Grid item xs={12} sm={6}>
-							<PageCard cardName="AxxonSoftLogoInverse" />
-						</Grid>
-						<Grid item xs={12} sm={6}>
-							<PageCard cardName="ItvGroupLogo" />
-						</Grid>
-						<Grid item xs={12} sm={6}>
-							<PageCard cardName="ItvGroupLogoInverse" />
+							<PageCard cardName="ItvOnlyLogoInverse" />
 						</Grid>
 					</Grid>
+					<EndOfSection/>
 
-					<EndOfSection height={2}/>
+					<Grid item xs={12} sm={12}>
+						<PageCard cardName="LogoInGroup" landscape={true} />
+					</Grid>
 
-					<Grid name={pageSection[1].label} container spacing={2}>
+					<EndOfSection/>
+
+					<Grid name={pageSection[2].label} container spacing={2}>
 						<Grid item xs={12}>
 							<ContentHeader title={'UsageGuidelines'}/>
 						</Grid>
@@ -70,7 +81,7 @@ export default function (props) {
 
 					<EndOfSection height={2}/>
 
-					<Grid container name={pageSection[2].label}  spacing={2}>
+					<Grid container name={pageSection[3].label}  spacing={2}>
 						<Grid item xs={12}>
 							<ContentHeader title={'Colors'}/>
 						</Grid>
@@ -102,7 +113,7 @@ export default function (props) {
 
 					<EndOfSection height={2}/>
 
-					<Grid  name={pageSection[3].label} container spacing={2}>
+					<Grid  name={pageSection[4].label} container spacing={2}>
 						<Grid item xs={12}>
 							<ContentHeader title={'UsageRestrictions'}/>
 						</Grid>
@@ -128,7 +139,7 @@ export default function (props) {
 
 					<EndOfSection height={2}/>
 
-					<Grid name={pageSection[4].label} container spacing={2}>
+					<Grid name={pageSection[5].label} container spacing={2}>
 						<Grid item xs={12}>
 							<ContentHeader title={'Fonts'}/>
 						</Grid>
@@ -178,7 +189,7 @@ export default function (props) {
 
 					<EndOfSection height={2}/>
 
-					<Grid name={pageSection[5].label} container spacing={2}>
+					<Grid name={pageSection[6].label} container spacing={2}>
 						<Grid item xs={12}>
 							<ContentHeader title={'LogoGroup'}/>
 						</Grid>
@@ -197,12 +208,6 @@ export default function (props) {
 
 						<Grid item xs={12} sm={12}>
 							<PageCard cardName="logosExbSample" landscape={true} />
-						</Grid>
-
-						<EndOfSection height = {2}/>
-
-						<Grid item xs={12} sm={12}>
-							<PageCard cardName="LogoInGroup" landscape={true} />
 						</Grid>
 
 						<EndOfSection height = {2}/>

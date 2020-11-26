@@ -9,6 +9,7 @@ module.exports = {
   'powered': 'Разработано с помощью',
   'UsageGuidelines': 'Правила размещения',
   'Colors': 'Цветовая палитра',
+  'LogosGuidelines': "ITVGROUP или ITV?",
   'UsageRestrictions': 'Неправильное использование',
   'Fonts': 'Шрифты',
   'Download': 'Скачать',
