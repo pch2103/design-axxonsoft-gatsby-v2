@@ -2,7 +2,7 @@ module.exports = {
   'language': 'ру',
   'en': 'English',
   'ru': 'Русский',
-  'company': 'ITV | AxxonSoft.',
+  'company': 'ITV GROUP.',
   'companyUrl': 'https://www.itv.ru/',
   'copyright': 'Дизайн-группа компании.',
   'Logotype': 'Логотипы',

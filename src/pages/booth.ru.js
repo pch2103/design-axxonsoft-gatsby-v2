@@ -20,7 +20,7 @@ export default function (props) {
 	];
 	return (
 			<Layout location={props.location}>
-				<SEO title={'ITV | AxxonSoft. Выставочные стенды.'} lang={props.pageContext.langKey}/>
+				<SEO title={'ITV GROUP. Выставочные стенды.'} lang={props.pageContext.langKey}/>
 				<PageBanner location={props.location}/>
 				<section style={{display: "flex"}}>
 
