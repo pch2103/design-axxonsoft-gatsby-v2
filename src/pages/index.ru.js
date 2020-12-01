@@ -29,7 +29,7 @@ export default function (props) {
 				<section style={{display: "flex"}}>
 				<Container maxWidth="lg">
 
-					<Grid name={pageSection[0].label} container spacing={4}>
+					<Grid container name={pageSection[0].label} spacing={4}>
 						<Grid item xs={12}>
 							<ContentHeader title={'Logotype'}/>
 						</Grid>
@@ -39,30 +39,29 @@ export default function (props) {
 						<Grid item xs={12} sm={6}>
 							<PageCard cardName="ItvOnlyLogo" />
 						</Grid>
-						<EndOfSection/>
-					</Grid>
-					<Grid name={pageSection[1].label} container spacing={4}>
-						<Grid item xs={12} sm={12}>
-							<PageText attention={true} cardName="logosText1"/>
-						</Grid>
-
-						<EndOfSection height={2}/>
-
 						<Grid item xs={12} sm={6}>
 							<PageCard cardName="ItvGroupLogoInverse" />
 						</Grid>
-
 						<Grid item xs={12} sm={6}>
 							<PageCard cardName="ItvOnlyLogoInverse" />
 						</Grid>
 					</Grid>
-					<EndOfSection/>
 
-					<Grid item xs={12} sm={12}>
-						<PageCard cardName="LogoInGroup" landscape={true} />
+					<EndOfSection height={2}/>
+
+					<Grid container name={pageSection[1].label} spacing={4}>
+						<Grid item xs={12}>
+							<ContentHeader title={'LogosGuidelines'}/>
+						</Grid>
+						<Grid item xs={12} sm={12}>
+							<PageText attention={true} cardName="logosText1"/>
+						</Grid>
+						<Grid item xs={12} sm={12}>
+							<PageCard cardName="LogoInGroup" landscape={true} />
+						</Grid>
 					</Grid>
 
-					<EndOfSection/>
+					<EndOfSection height={2}/>
 
 					<Grid name={pageSection[2].label} container spacing={2}>
 						<Grid item xs={12}>
@@ -218,7 +217,7 @@ export default function (props) {
 
 					</Grid>
 
-					<EndOfSection/>
+					<EndOfSection height={2}/>
 
 				</Container>
 
