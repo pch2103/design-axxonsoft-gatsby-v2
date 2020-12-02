@@ -34,16 +34,13 @@ export default function (props) {
 							<ContentHeader title={'Logotype'}/>
 						</Grid>
 						<Grid item xs={12} sm={6}>
-							<PageCard cardName="ItvGroupLogo" />
-						</Grid>
-						<Grid item xs={12} sm={6}>
 							<PageCard cardName="ItvOnlyLogo" />
 						</Grid>
 						<Grid item xs={12} sm={6}>
-							<PageCard cardName="ItvGroupLogoInverse" />
-						</Grid>
-						<Grid item xs={12} sm={6}>
 							<PageCard cardName="ItvOnlyLogoInverse" />
+						</Grid>
+						<Grid item xs={12} sm={12}>
+							<PageCard cardName="LogoInGroup" landscape={true} />
 						</Grid>
 					</Grid>
 
@@ -55,9 +52,6 @@ export default function (props) {
 						</Grid>
 						<Grid item xs={12} sm={12}>
 							<PageText attention={true} cardName="logosText1"/>
-						</Grid>
-						<Grid item xs={12} sm={12}>
-							<PageCard cardName="LogoInGroup" landscape={true} />
 						</Grid>
 					</Grid>
 
