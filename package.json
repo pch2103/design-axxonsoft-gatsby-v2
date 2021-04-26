@@ -21,14 +21,18 @@
     "gatsby-source-contentful": "^2.3.3",
     "gatsby-source-filesystem": "^2.3.3",
     "gatsby-transformer-sharp": "^2.5.2",
+    "path-browserify": "^1.0.1",
     "prop-types": "^15.7.2",
     "ptz-i18n": "^1.0.0",
     "react": "latest",
     "react-dom": "latest",
     "react-helmet": "latest",
     "react-intl": "^4.5.3",
-    "react-markdown": "^4.3.1",
+    "react-markdown": "latest",
     "react-scroll": "^1.7.16"
+  },
+  "browser": {
+    "path": "path-browserify"
   },
   "scripts": {
     "develop": "gatsby develop",
