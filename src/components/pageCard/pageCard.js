@@ -98,7 +98,7 @@ const PageCard = ({cardContent, ...props}) => {
 						}
 						<Typography variant="body2" component={'span'} >
 							<ReactMarkdown
-									source={cardContent.text}
+									children={cardContent.text}
 							/>
 						</Typography>
 					</div>

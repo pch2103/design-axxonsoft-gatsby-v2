@@ -69,7 +69,7 @@ const PageCardLandscape = ({cardContent, ...props}) => {
 							}
 							<Typography variant={props.small ? 'body2' : 'body1'} component={'span'}>
 								<ReactMarkdown
-										source={cardContent.text}
+										children={cardContent.text}
 								/>
 							</Typography>
 						</div>
